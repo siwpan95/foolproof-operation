@@ -1,0 +1,84 @@
+{
+    "🎮 游戏开发": {
+        "pygame-ce": "pygame-ce",
+        "arcade": "arcade",
+        "pyxel": "pyxel",
+        "ursina": "ursina",
+        "panda3d": "panda3d",
+        "pymunk": "pymunk"
+    },
+    "🤖 AI / 机器学习": {
+        "numpy": "numpy",
+        "pandas": "pandas",
+        "scikit-learn": "scikit-learn",
+        "torch": "torch",
+        "transformers": "transformers",
+        "xgboost": "xgboost",
+        "nltk": "nltk",
+        "jieba": "jieba",
+        "jupyter": "jupyter"
+    },
+    "🌐 Web 开发": {
+        "fastapi": "fastapi[all]",
+        "uvicorn": "uvicorn[standard]",
+        "pydantic": "pydantic[email]",
+        "flask": "flask",
+        "django": "django",
+        "jinja2": "jinja2"
+    },
+    "🕷️ 爬虫 / 网络": {
+        "requests": "requests",
+        "httpx": "httpx",
+        "beautifulsoup4": "beautifulsoup4",
+        "scrapy": "scrapy",
+        "playwright": "playwright"
+    },
+    "📊 数据可视化": {
+        "matplotlib": "matplotlib",
+        "seaborn": "seaborn",
+        "plotly": "plotly",
+        "bokeh": "bokeh"
+    },
+    "🗄️ 数据库": {
+        "sqlalchemy": "sqlalchemy",
+        "psycopg2-binary": "psycopg2-binary",
+        "pymongo": "pymongo",
+        "redis": "redis"
+    },
+    "🖼️ 图像 / 音视频": {
+        "pillow": "pillow",
+        "opencv-python": "opencv-python",
+        "moviepy": "moviepy",
+        "pydub": "pydub"
+    },
+    "📄 办公自动化": {
+        "openpyxl": "openpyxl",
+        "python-docx": "python-docx",
+        "python-pptx": "python-pptx",
+        "pyautogui": "pyautogui",
+        "selenium": "selenium"
+    },
+    "⚡ 异步 / 并发": {
+        "aiohttp": "aiohttp",
+        "celery": "celery",
+        "aiofiles": "aiofiles"
+    },
+    "🔐 加密 / 安全": {
+        "cryptography": "cryptography",
+        "pyjwt": "pyjwt",
+        "bcrypt": "bcrypt",
+        "passlib": "passlib"
+    },
+    "🛠️ 工具链": {
+        "pip": "pip",
+        "pytest": "pytest",
+        "ruff": "ruff",
+        "loguru": "loguru",
+        "rich": "rich",
+        "pyinstaller": "pyinstaller",
+        "python-dotenv": "python-dotenv",
+        "pyyaml": "pyyaml",
+        "black": "black",
+        "mypy": "mypy"
+    }
+}

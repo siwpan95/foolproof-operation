@@ -1,0 +1,1 @@
+❌ tensorflow 安装失败：Command '['C:\\Users\\13122\\AppData\\Local\\Programs\\Python\\Python314\\python.exe', '-m', 'pip', 'install', '-U', 'tensorflow']' returned non-zero exit status 1.
