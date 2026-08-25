@@ -27,3 +27,11 @@ python requirements.py
 ## 依赖
 
 - Python >= 3.8 + tkinter (标准库)
+
+
+---
+
+## 仓库索引标注（2026-08-25 · siwpan 统一治理）
+
+> 依赖库安装器 4.0；本地 G:\tools\dev\requirements。
+> 本标注为发布面统一追加，不改变原有内容。
