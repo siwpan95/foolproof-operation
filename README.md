@@ -38,3 +38,11 @@ python requirements.py
 - 程序启动会自动检查 pip 状态，如有问题顶部会显示红色提示
 - 部分库（如 tensorflow）对 Python 版本有特定要求
 - 安装/更新失败会自动记录到 `失败日志.txt`
+
+
+---
+
+## 仓库索引标注（2026-08-25 · siwpan 统一治理）
+
+> 依赖库安装器 3.0；本地 G:\tools\dev\requirements。
+> 本标注为发布面统一追加，不改变原有内容。
