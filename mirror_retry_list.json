@@ -1,0 +1,65 @@
+[
+  {
+    "name": "outlines",
+    "wanted": "0.1.11",
+    "status": "ok",
+    "install_spec": "outlines==1.3.3",
+    "rank": 2
+  },
+  {
+    "name": "py-backwards",
+    "wanted": "0.7",
+    "status": "ok",
+    "install_spec": "py-backwards==0.7",
+    "rank": 2
+  },
+  {
+    "name": "py-backwards-astunparse",
+    "wanted": "1.5.0.post3",
+    "status": "ok",
+    "install_spec": "py-backwards-astunparse==1.5.0.post1",
+    "rank": 2
+  },
+  {
+    "name": "ssh2-python",
+    "wanted": "1.2.0.post1",
+    "status": "sdist_only",
+    "install_spec": "ssh2-python==1.0.0",
+    "rank": 3
+  },
+  {
+    "name": "uvloop",
+    "wanted": "0.22.1",
+    "status": "sdist_only",
+    "install_spec": "uvloop==0.22.1",
+    "rank": 3
+  },
+  {
+    "name": "arcade",
+    "wanted": "3.3.3",
+    "status": "ok",
+    "install_spec": "arcade==3.3.3",
+    "rank": 2
+  },
+  {
+    "name": "pyaudio",
+    "wanted": "0.2.9",
+    "status": "sdist_only",
+    "install_spec": "pyaudio==0.2.8",
+    "rank": 3
+  },
+  {
+    "name": "ray",
+    "wanted": "2.57.0",
+    "status": "none",
+    "install_spec": null,
+    "rank": 9
+  },
+  {
+    "name": "triton",
+    "wanted": "3.7.1",
+    "status": "none",
+    "install_spec": null,
+    "rank": 9
+  }
+]

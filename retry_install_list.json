@@ -1,0 +1,660 @@
+[
+  {
+    "spec": "tensorflow",
+    "name": "tensorflow",
+    "status": "install",
+    "install_spec": "tensorflow==2.21.0",
+    "reason": "最新可用（wheel: sdist-only） → tensorflow==2.21.0"
+  },
+  {
+    "spec": "moderngl",
+    "name": "moderngl",
+    "status": "install",
+    "install_spec": "moderngl==5.12.0",
+    "reason": "最新可用（wheel: sdist-only） → moderngl==5.12.0"
+  },
+  {
+    "spec": "pyaudio",
+    "name": "pyaudio",
+    "status": "install",
+    "install_spec": "pyaudio==0.2.14",
+    "reason": "最新可用（wheel: sdist-only） → pyaudio==0.2.14"
+  },
+  {
+    "spec": "fasttext",
+    "name": "fasttext",
+    "status": "install",
+    "install_spec": "fasttext==0.9.3",
+    "reason": "最新可用（wheel: sdist-only） → fasttext==0.9.3"
+  },
+  {
+    "spec": "gensim",
+    "name": "gensim",
+    "status": "install",
+    "install_spec": "gensim==4.4.0",
+    "reason": "最新可用（wheel: sdist-only） → gensim==4.4.0"
+  },
+  {
+    "spec": "lxml==4.3.2",
+    "name": "lxml",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 6.1.2"
+  },
+  {
+    "spec": "arcade",
+    "name": "arcade",
+    "status": "install",
+    "install_spec": "arcade==3.3.3",
+    "reason": "最新可用（wheel: py3-any） → arcade==3.3.3"
+  },
+  {
+    "spec": "pygame",
+    "name": "pygame",
+    "status": "install",
+    "install_spec": "pygame==2.6.1",
+    "reason": "最新可用（wheel: sdist-only） → pygame==2.6.1"
+  },
+  {
+    "spec": "ssh2-python",
+    "name": "ssh2-python",
+    "status": "install",
+    "install_spec": "ssh2-python==1.2.0.post1",
+    "reason": "最新可用（wheel: cp314） → ssh2-python==1.2.0.post1"
+  },
+  {
+    "spec": "cffi==1.12.3",
+    "name": "cffi",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.1.1"
+  },
+  {
+    "spec": "aiohttp==3.5.4",
+    "name": "aiohttp",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.14.3"
+  },
+  {
+    "spec": "cryptography==2.6.1",
+    "name": "cryptography",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 50.0.0"
+  },
+  {
+    "spec": "kiwisolver==1.1.0",
+    "name": "kiwisolver",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 1.5.0"
+  },
+  {
+    "spec": "main",
+    "name": "main",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "matplotlib==3.0.3",
+    "name": "matplotlib",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.11.1"
+  },
+  {
+    "spec": "MySQLdb",
+    "name": "mysqldb",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 应改名为 mysqlclient。"
+  },
+  {
+    "spec": "numpy==1.16.3",
+    "name": "numpy",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.5.2"
+  },
+  {
+    "spec": "pandas==0.24.2",
+    "name": "pandas",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.0.5"
+  },
+  {
+    "spec": "Pillow==6.2.0",
+    "name": "pillow",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 11.3.0"
+  },
+  {
+    "spec": "psutil==5.6.2",
+    "name": "psutil",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 7.2.2"
+  },
+  {
+    "spec": "pycryptodomex==3.8.1",
+    "name": "pycryptodomex",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.23.0"
+  },
+  {
+    "spec": "pygame>=2.5",
+    "name": "pygame",
+    "status": "install",
+    "install_spec": "pygame>=2.5",
+    "reason": "specifier 内匹配（wheel: sdist-only） → pygame>=2.5"
+  },
+  {
+    "spec": "pywin32==224",
+    "name": "pywin32",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 312"
+  },
+  {
+    "spec": "simpleaudio",
+    "name": "simpleaudio",
+    "status": "install",
+    "install_spec": "simpleaudio==1.0.4",
+    "reason": "最新可用（wheel: sdist-only） → simpleaudio==1.0.4"
+  },
+  {
+    "spec": "win32gui",
+    "name": "win32gui",
+    "status": "install",
+    "install_spec": "win32gui==221.6",
+    "reason": "最新可用（wheel: sdist-only） → win32gui==221.6"
+  },
+  {
+    "spec": "aip",
+    "name": "aip",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "autopep8==1.4.3",
+    "name": "autopep8",
+    "status": "install",
+    "install_spec": "autopep8==1.4.3",
+    "reason": "specifier 内匹配（wheel: sdist-only） → autopep8==1.4.3"
+  },
+  {
+    "spec": "backrooms_raycaster",
+    "name": "backrooms-raycaster",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "behavior_tree",
+    "name": "behavior-tree",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "compile_decompile",
+    "name": "compile-decompile",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "cublas_ops",
+    "name": "cublas-ops",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "dynamic_loss_scaler",
+    "name": "dynamic-loss-scaler",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "flash_attn",
+    "name": "flash_attn",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "flash-attn 基本仅支持 Linux+CUDA，Windows 不建议尝试"
+  },
+  {
+    "spec": "gevent==1.4.0",
+    "name": "gevent",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 26.8.0"
+  },
+  {
+    "spec": "git",
+    "name": "git",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "greenlet==0.4.15",
+    "name": "greenlet",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.5.5"
+  },
+  {
+    "spec": "kivy",
+    "name": "kivy",
+    "status": "install",
+    "install_spec": "kivy==2.3.1",
+    "reason": "最新可用（wheel: sdist-only） → kivy==2.3.1"
+  },
+  {
+    "spec": "lxml==4.4.2",
+    "name": "lxml",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 6.1.2"
+  },
+  {
+    "spec": "newspaper",
+    "name": "newspaper",
+    "status": "install",
+    "install_spec": "newspaper==0.1.0.7",
+    "reason": "最新可用（wheel: sdist-only） → newspaper==0.1.0.7"
+  },
+  {
+    "spec": "numba==0.60.0",
+    "name": "numba",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 0.67.0"
+  },
+  {
+    "spec": "numpy >= 1.20.0,<2.0.0",
+    "name": "numpy",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.5.2"
+  },
+  {
+    "spec": "numpy<2.0.0",
+    "name": "numpy",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.5.2"
+  },
+  {
+    "spec": "numpy==1.17.4",
+    "name": "numpy",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.5.2"
+  },
+  {
+    "spec": "numpy>=1.24,<2.0",
+    "name": "numpy",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.5.2"
+  },
+  {
+    "spec": "OpenGL",
+    "name": "opengl",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 应改名为 PyOpenGL。"
+  },
+  {
+    "spec": "outlines==0.1.11",
+    "name": "outlines",
+    "status": "install",
+    "install_spec": "outlines==0.1.11",
+    "reason": "specifier 内匹配（wheel: py3-any） → outlines==0.1.11"
+  },
+  {
+    "spec": "pandas==0.25.3",
+    "name": "pandas",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 3.0.5"
+  },
+  {
+    "spec": "Pillow==6.2.1",
+    "name": "pillow",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 11.3.0"
+  },
+  {
+    "spec": "pip install librosa",
+    "name": "pip install librosa",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install numpy",
+    "name": "pip install numpy",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install pretty_midi",
+    "name": "pip install pretty_midi",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install pygame",
+    "name": "pip install pygame",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install scipy",
+    "name": "pip install scipy",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install soundfile",
+    "name": "pip install soundfile",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pip install tkinter",
+    "name": "pip install tkinter",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "垃圾行：整行 shell 命令被当作包名"
+  },
+  {
+    "spec": "pyarrow==19.0.0",
+    "name": "pyarrow",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 25.0.1"
+  },
+  {
+    "spec": "py-backwards==0.7",
+    "name": "py-backwards",
+    "status": "install",
+    "install_spec": "py-backwards==0.7",
+    "reason": "specifier 内匹配（wheel: py3-any） → py-backwards==0.7"
+  },
+  {
+    "spec": "py-backwards-astunparse==1.5.0.post3",
+    "name": "py-backwards-astunparse",
+    "status": "install",
+    "install_spec": "py-backwards-astunparse==1.5.0.post3",
+    "reason": "specifier 内匹配（wheel: sdist-only） → py-backwards-astunparse==1.5.0.post3"
+  },
+  {
+    "spec": "pyecharts==0.5.1",
+    "name": "pyecharts",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.1.0"
+  },
+  {
+    "spec": "pygame>=2.0",
+    "name": "pygame",
+    "status": "install",
+    "install_spec": "pygame>=2.0",
+    "reason": "specifier 内匹配（wheel: sdist-only） → pygame>=2.0"
+  },
+  {
+    "spec": "pygame>=2.1.0",
+    "name": "pygame",
+    "status": "install",
+    "install_spec": "pygame>=2.1.0",
+    "reason": "specifier 内匹配（wheel: sdist-only） → pygame>=2.1.0"
+  },
+  {
+    "spec": "PyQt5==5.12.1",
+    "name": "pyqt5",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 5.15.11"
+  },
+  {
+    "spec": "PyQt5-sip==4.19.15",
+    "name": "pyqt5-sip",
+    "status": "install",
+    "install_spec": "PyQt5-sip==4.19.15",
+    "reason": "specifier 内匹配（wheel: sdist-only） → PyQt5-sip==4.19.15"
+  },
+  {
+    "spec": "python-rtmidi>=1.4.0",
+    "name": "python-rtmidi",
+    "status": "install",
+    "install_spec": "python-rtmidi>=1.4.0",
+    "reason": "specifier 内匹配（wheel: sdist-only） → python-rtmidi>=1.4.0"
+  },
+  {
+    "spec": "pyyaml >= 6.0,<=6.0.2",
+    "name": "pyyaml",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 6.0.3"
+  },
+  {
+    "spec": "ray==2.42.1",
+    "name": "ray",
+    "status": "install",
+    "install_spec": "ray==2.42.1",
+    "reason": "specifier 内匹配（wheel: sdist-only） → ray==2.42.1"
+  },
+  {
+    "spec": "regex==2020.1.8",
+    "name": "regex",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2026.7.19"
+  },
+  {
+    "spec": "sageattn3",
+    "name": "sageattn3",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "sampler_system",
+    "name": "sampler-system",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "scikit-learn >= 0.14,<1.3.0",
+    "name": "scikit-learn",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 1.9.0"
+  },
+  {
+    "spec": "separate_back",
+    "name": "separate-back",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "skimage",
+    "name": "skimage",
+    "status": "install",
+    "install_spec": "skimage==0.0",
+    "reason": "最新可用（wheel: sdist-only） → skimage==0.0"
+  },
+  {
+    "spec": "taichi",
+    "name": "taichi",
+    "status": "install",
+    "install_spec": "taichi==1.7.4",
+    "reason": "最新可用（wheel: sdist-only） → taichi==1.7.4"
+  },
+  {
+    "spec": "test_probe",
+    "name": "test-probe",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "tkMessageBox==0.1",
+    "name": "tkmessagebox",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "Python 标准库（py2 遗留写法），无需安装"
+  },
+  {
+    "spec": "torch_directml",
+    "name": "torch-directml",
+    "status": "skip_no_compatible",
+    "install_spec": null,
+    "reason": "无发布版本"
+  },
+  {
+    "spec": "torch_mlu",
+    "name": "torch-mlu",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "torch_npu",
+    "name": "torch-npu",
+    "status": "install",
+    "install_spec": "torch_npu==2.12.0",
+    "reason": "最新可用（wheel: sdist-only） → torch_npu==2.12.0"
+  },
+  {
+    "spec": "torch==1.6.0",
+    "name": "torch",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 2.13.0"
+  },
+  {
+    "spec": "triton",
+    "name": "triton",
+    "status": "install",
+    "install_spec": "triton==3.7.1",
+    "reason": "最新可用（wheel: cp314） → triton==3.7.1"
+  },
+  {
+    "spec": "typed-ast==1.3.2",
+    "name": "typed-ast",
+    "status": "install",
+    "install_spec": "typed-ast==1.3.2",
+    "reason": "specifier 内匹配（wheel: sdist-only） → typed-ast==1.3.2"
+  },
+  {
+    "spec": "urlparse",
+    "name": "urlparse",
+    "status": "skip",
+    "install_spec": null,
+    "reason": "Python 标准库，无需安装"
+  },
+  {
+    "spec": "uvloop",
+    "name": "uvloop",
+    "status": "install",
+    "install_spec": "uvloop==0.22.1",
+    "reason": "最新可用（wheel: cp314） → uvloop==0.22.1"
+  },
+  {
+    "spec": "vlc",
+    "name": "vlc",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "vocal_coupling",
+    "name": "vocal-coupling",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "vst3",
+    "name": "vst3",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 疑似本地模块/拼写错误。"
+  },
+  {
+    "spec": "win32process",
+    "name": "win32process",
+    "status": "skip_not_found",
+    "install_spec": null,
+    "reason": "PyPI 无此包。 应改名为 pywin32。"
+  },
+  {
+    "spec": "xgrammar==0.1.11; platform_machine == \"x86_64\"",
+    "name": "xgrammar",
+    "status": "install",
+    "install_spec": "xgrammar==0.1.11; platform_machine == \"x86_64\"",
+    "reason": "specifier 内匹配（wheel: sdist-only） → xgrammar==0.1.11; platform_machine == \"x86_64\""
+  },
+  {
+    "spec": "pynput>=1.7.0        # 全局键盘监听与控制",
+    "name": "pynput",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 1.8.2"
+  },
+  {
+    "spec": "pyperclip>=1.8.0     # 剪贴板操作（上屏文本）",
+    "name": "pyperclip",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "F:\\Python314 已安装 1.11.0"
+  },
+  {
+    "spec": "thinc",
+    "name": "thinc",
+    "status": "install",
+    "install_spec": "thinc==9.1.1",
+    "reason": "最新可用（wheel: sdist-only） → thinc==9.1.1"
+  },
+  {
+    "spec": "MySQLdb",
+    "name": "mysqlclient",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "改名替代包 mysqlclient 已安装 2.2.8"
+  },
+  {
+    "spec": "OpenGL",
+    "name": "pyopengl",
+    "status": "rename_install",
+    "install_spec": "PyOpenGL==3.1.10",
+    "reason": "原包名无效，安装替代包（最新可用（wheel: py3-any））"
+  },
+  {
+    "spec": "win32process",
+    "name": "pywin32",
+    "status": "already_installed",
+    "install_spec": null,
+    "reason": "改名替代包 pywin32 已安装 312"
+  }
+]
