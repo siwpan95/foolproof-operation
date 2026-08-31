@@ -23,6 +23,27 @@ python requirements.py
 python requirements.py --python F:\Python314\python.exe
 ```
 
+## 命令行接口（cmd / PowerShell 直接可用）
+
+`python requirements.py cli <子命令>`，无 `cli` 参数时仍打开图形界面：
+
+```bash
+python requirements.py cli list                     # 列出全部分类与库名
+python requirements.py cli list --category 加密      # 只列某个分类（可省略 emoji/写片段）
+python requirements.py cli install requests aiohttp  # 安装指定库
+python requirements.py cli install --category Web     # 安装整个分类
+python requirements.py cli install --file req.txt     # 按 requirements.txt 安装
+python requirements.py cli install --all --upgrade    # 全量安装并升级
+python requirements.py cli uninstall requests         # 卸载
+python requirements.py cli check --category 数据库     # 版本与更新检查
+python requirements.py cli scan                       # 扫描全盘 Python 环境
+python requirements.py cli es -n 20 "*.py"            # Everything 搜索（内置 es.exe）
+```
+
+- `install/uninstall/check` 可用 `--python <exe>` 指定目标解释器；
+- `es` 需本机 Everything 主程序/服务在运行（详见 `tools/everything/README.md`，
+  ES 为 MIT © voidtools）。
+
 ## 配置
 
 编辑 `requirements_categories.json` 增删分类和库名。

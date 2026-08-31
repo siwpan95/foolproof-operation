@@ -1143,4 +1143,8 @@ class InstallerApp(tk.Tk):
 
 # ========= 启动 =========
 if __name__ == "__main__":
+    if len(sys.argv) >= 2 and sys.argv[1] == "cli":
+        # 命令行模式：python requirements.py cli <子命令>（见 cli.py）
+        from cli import run_cli
+        sys.exit(run_cli(sys.argv[2:]))
     InstallerApp().mainloop()

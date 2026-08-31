@@ -1,36 +1,52 @@
-# 傻瓜式操作
+# Python Dependency Installer (foolproof-operation)
 
-#### Description
-按需下载
+A tkinter GUI tool for managing 100+ common Python packages, organized into 15 categories
+(game dev / AI / web / scraping / visualization / database / media / office automation /
+async / crypto / toolchain / NLP / cloud / testing / auto-discovery).
 
-#### Software Architecture
-Software architecture description
+## Features
 
-#### Installation
+- Category-based package management (install / uninstall / batch upgrade)
+- Version check against PyPI
+- pip health check with three repair options
+- Full-disk scan for all Python environments
+- requirements.txt support
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Quick start
 
-#### Instructions
+```bash
+# stdlib + tkinter only, no extra dependencies
+python requirements.py
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+# target a different Python interpreter
+python requirements.py --python F:\Python314\python.exe
+```
 
-#### Contribution
+## Command-line interface
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+`python requirements.py cli <subcommand>` — running without `cli` opens the GUI as before:
 
+```bash
+python requirements.py cli list                      # list all categories & packages
+python requirements.py cli list --category Web       # filter by category (fuzzy)
+python requirements.py cli install requests aiohttp  # install packages
+python requirements.py cli install --category Web    # install a whole category
+python requirements.py cli install --file req.txt    # install from requirements.txt
+python requirements.py cli install --all --upgrade   # install everything, upgraded
+python requirements.py cli uninstall requests        # uninstall
+python requirements.py cli check --category database # version/update check
+python requirements.py cli scan                      # scan for Python environments
+python requirements.py cli es -n 20 "*.py"           # Everything search (bundled es.exe)
+```
 
-#### Gitee Feature
+- `install/uninstall/check` accept `--python <exe>` to pick the target interpreter.
+- `es` requires the Everything app/service to be running on this machine
+  (see `tools/everything/README.md`; ES is MIT © voidtools).
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## Configuration
+
+Edit `requirements_categories.json` to add/remove categories and packages.
+
+## Dependencies
+
+- Python >= 3.8 + tkinter (stdlib)
