@@ -232,3 +232,17 @@
 [2026-08-22 07:24:46] ❌ ssh2-python 更新失败：Command '['C:\\Users\\13122\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe', '-m', 'pip', 'install', '--upgrade', 'ssh2-python']' returned non-zero exit status 1.
 [2026-08-22 07:25:08] ❌ tensorflow 更新失败：Command '['C:\\Users\\13122\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe', '-m', 'pip', 'install', '--upgrade', 'tensorflow']' returned non-zero exit status 1.
 [2026-08-22 07:25:40] ❌ thinc 更新失败：Command '['C:\\Users\\13122\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe', '-m', 'pip', 'install', '--upgrade', 'thinc']' returned non-zero exit status 1.
+[2026-09-19 21:07:46] ❌ arcade 安装失败：
+      ERROR: Failed building wheel for pymunk
+    error: failed-wheel-build-for-install
+    
+    Failed to build installable wheels for some pyproject.toml based projects
+    
+    pymunk
+[2026-09-19 21:09:24] ❌ moderngl 安装失败：
+      ERROR: Failed building wheel for glcontext
+    error: failed-wheel-build-for-install
+    
+    Failed to build installable wheels for some pyproject.toml based projects
+    
+    moderngl, glcontext

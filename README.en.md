@@ -1,8 +1,11 @@
 # Python Dependency Installer (foolproof-operation)
 
-A tkinter GUI tool for managing 100+ common Python packages, organized into 15 categories
-(game dev / AI / web / scraping / visualization / database / media / office automation /
-async / crypto / toolchain / NLP / cloud / testing / auto-discovery).
+A tkinter GUI tool for managing 700+ Python packages, organized into 24 functional
+categories (game dev / AI & ML / LLM & agents / web / scraping / visualization / database /
+image & media / audio & music / office automation / GUI & desktop / async / crypto /
+pentesting / reverse engineering / toolchain / packaging / NLP / document & text /
+scientific computing / cloud & DevOps / testing / local packages / transitive dependencies),
+plus an auto-discovery bucket for freshly scanned packages.
 
 ## Features
 

@@ -272,11 +272,12 @@ class InstallerApp(tk.Tk):
 
     def install(self, packages):
         self.log_write("🚀 开始安装依赖库...\n")
+        from cli import split_spec   # 共享：支持 "-e <路径>" 形式的 value
 
         for name, pkg in packages:
             self.log_write(f"📦 安装 {name}")
             rc, err = self._pip_run(
-                [PYTHON_EXE, "-m", "pip", "install", "-U", pkg]
+                [PYTHON_EXE, "-m", "pip", "install", "-U", *split_spec(pkg)]
             )
             if rc == 0:
                 self.log_write(f"✅ {name} 安装成功\n")
@@ -317,10 +318,11 @@ class InstallerApp(tk.Tk):
         except Exception:
             pass
 
+        from cli import pip_query_name   # 共享：本地路径型 value 的包名解析
         for name, pkg in packages:
             try:
-                # 去掉 extras（如 fastapi[all] -> fastapi）
-                pkg_base = pkg.split("[")[0]
+                # 去掉 extras（如 fastapi[all] -> fastapi）；本地路径型 value 回退显示名
+                pkg_base = pip_query_name(name, pkg)
                 result = subprocess.run(
                     [PYTHON_EXE, "-m", "pip", "show", pkg_base],
                     capture_output=True, text=True, timeout=30,
@@ -375,9 +377,10 @@ class InstallerApp(tk.Tk):
         # pip 自身放最后更新
         sorted_pkgs = sorted(packages, key=lambda x: ("pip" in x[0].lower(), x[0]))
 
+        from cli import split_spec   # 共享：支持 "-e <路径>" 形式的 value
         for name, pkg in sorted_pkgs:
             self.log_write(f"⬆️ 更新 {name}")
-            cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", pkg]
+            cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", *split_spec(pkg)]
             if pkg.lower() == "pip":
                 cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", "pip"]
             rc, err = self._pip_run(cmd)
@@ -412,9 +415,10 @@ class InstallerApp(tk.Tk):
     def _uninstall(self, packages):
         self.log_write("🗑️ 开始卸载依赖库...\n")
 
+        from cli import pip_query_name   # 共享：本地路径型 value 的包名解析
         for name, pkg in packages:
             self.log_write(f"🗑️ 卸载 {name}")
-            pkg_base = pkg.split("[")[0]
+            pkg_base = pip_query_name(name, pkg)
             rc, err = self._pip_run(
                 [PYTHON_EXE, "-m", "pip", "uninstall", "-y", pkg_base]
             )

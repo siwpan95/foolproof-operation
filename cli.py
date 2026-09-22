@@ -22,6 +22,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import shlex
 import subprocess
 import sys
 from pathlib import Path
@@ -30,6 +32,50 @@ HERE = Path(__file__).resolve().parent
 CATEGORIES: dict = json.loads(
     (HERE / "requirements_categories.json").read_text(encoding="utf-8"))
 ES_EXE = HERE / "tools" / "everything" / "es.exe"
+
+# ---- 本地 / 自研包支持 ----
+# requirements_categories.json 的 value 通常是 PyPI 包名（可带 extras），
+# 但「🏠 本地 / 自研包」里自研包的 value 是本地路径（pip install <path>）。
+# 安装用 value；而 pip show / pip uninstall 要的是包名 —— 路径型 value 回退到显示名。
+_LOCAL_SPEC = re.compile(r"^(?:[A-Za-z]:[\\/]|[\\/]|\.\.?[\\/]|-)")
+_VALUE_INDEX: dict = {k: v for libs in CATEGORIES.values() for k, v in libs.items()}
+
+
+def is_local_spec(pkg: str) -> bool:
+    """value 是否为本地路径 / pip 选项形式（而非 PyPI 包名）。"""
+    return bool(_LOCAL_SPEC.match(pkg or ""))
+
+
+def target_of(name: str) -> str:
+    """库名 → pip 安装目标（value）；非清单项原样返回。"""
+    return _VALUE_INDEX.get(name, name)
+
+
+def pip_query_name(name: str, pkg: str) -> str:
+    """pip show / pip uninstall 需要的包名：去掉 extras；本地路径回落显示名。"""
+    return name if is_local_spec(pkg) else pkg.split("[")[0]
+
+
+def split_spec(pkg: str) -> list[str]:
+    """把分类 value 拆成 pip 参数列表，支持 `-e <路径>` 这类选项。
+
+        'requests'               -> ['requests']
+        'fastapi[all]'           -> ['fastapi[all]']
+        '-e G:/repos/an-engine'  -> ['-e', 'G:/repos/an-engine']
+
+    shlex 的两种模式各有短板，故按输入特征选择：
+      - 含引号 → posix=True：引号语义正确，且引号内的反斜杠会被保留
+      - 无引号但含反斜杠 → posix=False：否则 'G:\\repos' 会被吃掉分隔符且**不报错**
+      - 其余 → posix=True
+    路径建议一律写正斜杠，可完全绕开这个坑。
+    """
+    if not pkg:
+        return []
+    posix = not ("\\" in pkg and '"' not in pkg)
+    try:
+        return shlex.split(pkg, posix=posix) or [pkg]
+    except ValueError:          # 引号不配对等异常输入，退化为整体传参
+        return [pkg]
 
 # 全盘扫描时跳过的大目录（避免误入系统/备份区）
 _SCAN_SKIP = {"Windows", "ProgramData", "$Recycle.Bin", "System Volume Information",
@@ -91,15 +137,18 @@ def cmd_list(args) -> int:
 
 def cmd_install(args) -> int:
     pkgs = _resolve_packages(args.packages, args.category, args.file, args.all)
-    print(f"将安装 {len(pkgs)} 个库：{', '.join(pkgs[:8])}{'…' if len(pkgs) > 8 else ''}")
+    # 值可能是本地路径或带选项（-e ...），拆成 pip 参数
+    targets = [a for p in pkgs for a in split_spec(target_of(p))]
+    print(f"将安装 {len(pkgs)} 个库：{', '.join(targets[:8])}{'…' if len(targets) > 8 else ''}")
     cmd = ["install", "-U"] if args.upgrade else ["install"]
-    return _pip(cmd + pkgs, args.python)
+    return _pip(cmd + targets, args.python)
 
 
 def cmd_uninstall(args) -> int:
     pkgs = _resolve_packages(args.packages, args.category, None, False)
-    print(f"将卸载 {len(pkgs)} 个库：{', '.join(pkgs)}")
-    return _pip(["uninstall", "-y", *pkgs], args.python)
+    names = [pip_query_name(p, target_of(p)) for p in pkgs]
+    print(f"将卸载 {len(names)} 个库：{', '.join(names)}")
+    return _pip(["uninstall", "-y", *names], args.python)
 
 
 def cmd_check(args) -> int:
@@ -115,15 +164,16 @@ def cmd_check(args) -> int:
     except Exception:
         print("（pip list --outdated 失败，仅展示已安装版本）")
     for p in pkgs:
+        query = pip_query_name(p, target_of(p))      # pip show 要的是包名
         try:
             info = subprocess.check_output(
-                [py, "-m", "pip", "show", p], text=True, errors="replace", timeout=30)
+                [py, "-m", "pip", "show", query], text=True, errors="replace", timeout=30)
             ver = next((ln.split(":", 1)[1].strip()
                         for ln in info.splitlines() if ln.startswith("Version:")), "?")
         except subprocess.CalledProcessError:
             print(f"{p}: 未安装")
             continue
-        o = outdated.get(p.lower())
+        o = outdated.get(query.lower())
         if o:
             print(f"{p}: 已装 {ver} → 最新 {o.get('latest_version', '?')}（可更新）")
         else:
