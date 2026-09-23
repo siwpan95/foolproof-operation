@@ -19,7 +19,7 @@ import re
 import shlex
 from typing import Any, Dict, Iterable, List, Optional, Sequence
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = [
     "CategoriesError",
@@ -37,7 +37,7 @@ __all__ = [
     "AUTO_DISCOVERY_KEY",
 ]
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CATEGORIES_FILE = "requirements_categories.json"
 #: 「自动发现」桶的键（其条目是待人工归类的候选，不计入精选库数）。
 AUTO_DISCOVERY_KEY = "🔍 自动发现"
@@ -53,7 +53,7 @@ class CategoriesError(ValueError):
 
 
 def default_categories_path() -> str:
-    return os.path.join(REPO_ROOT, CATEGORIES_FILE)
+    return os.path.join(PACKAGE_ROOT, CATEGORIES_FILE)
 
 
 def load_categories(path: Optional[str] = None) -> Categories:
@@ -196,7 +196,7 @@ def resolve_packages(
 class CategoriesService(Service):
     """分类清单服务（插件行 ``categories``）。
 
-    配置：``path``（清单路径，默认仓库根 ``requirements_categories.json``）。
+    配置：``path``（清单路径，默认包内 ``requirements_categories.json``）。
     """
 
     name = "categories"

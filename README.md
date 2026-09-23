@@ -56,7 +56,7 @@ python requirements.py cli tasks                      # 任务日志（JSONL 操
 ```
 
 - `install/uninstall/check` 可用 `--python <exe>` 指定目标解释器；
-- `es` 需本机 Everything 主程序/服务在运行（详见 `tools/everything/README.md`，
+- `es` 需本机 Everything 主程序/服务在运行（详见 `foolproof_operation/foolproof_operation/foolproof_operation/tools/everything/README.md`，
   ES 为 MIT © voidtools）；
 - `scan` 是历史口径（glob + 目录名启发式，会漏深层 venv）；`envs` 走
   `foolproof.composition.json` 装配的插件，按 **index → es → walk** 依次回退，
@@ -68,7 +68,7 @@ python requirements.py cli tasks                      # 任务日志（JSONL 操
 
 ## 配置
 
-编辑 `requirements_categories.json` 增删分类和库名。格式为 `{"显示名": "pip 安装目标"}`：
+编辑 `foolproof_operation/requirements_categories.json` 增删分类和库名。格式为 `{"显示名": "pip 安装目标"}`：
 
 - **普通包**：值写 PyPI 包名，可带 extras，如 `"fastapi": "fastapi[all]"`；
 - **自研 / 本地包**：值写本地仓库路径，如 `"bloodmusic": "<PATH>"`。安装时执行

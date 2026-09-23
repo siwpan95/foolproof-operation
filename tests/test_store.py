@@ -7,8 +7,8 @@ import shutil
 import tempfile
 import unittest
 
-from index.store import IndexStore, NodeRow, StoreError
-from index.usn import (
+from foolproof_operation.index.store import IndexStore, NodeRow, StoreError
+from foolproof_operation.index.usn import (
     MFT_ROOT_INDEX,
     REASON_FILE_CREATE,
     REASON_FILE_DELETE,
@@ -17,7 +17,7 @@ from index.usn import (
     JournalInfo,
     UsnRecord,
 )
-from index import store as store_module
+from foolproof_operation.index import store as store_module
 
 
 def rec(index: int, name: str, parent: int, *, directory: bool = False, reason: int = 0) -> UsnRecord:

@@ -5,8 +5,8 @@ from __future__ import annotations
 import unittest
 from unittest import mock
 
-from index import probe
-from index.usn import JournalInfo, MAX_USN, UsnRecord, VolumeAccessError
+from foolproof_operation.index import probe
+from foolproof_operation.index.usn import JournalInfo, MAX_USN, UsnRecord, VolumeAccessError
 
 
 def rec(index: int, name: str, parent: int, *, directory: bool = False) -> UsnRecord:

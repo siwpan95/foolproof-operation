@@ -60,7 +60,7 @@ python requirements.py cli tasks                      # task log (JSONL operatio
 
 - `install` / `uninstall` / `check` accept `--python <exe>` to pick the target interpreter;
 - `es` requires the Everything app/service to be running on this machine (see
-  `tools/everything/README.md`; ES is MIT © voidtools);
+  `foolproof_operation/foolproof_operation/foolproof_operation/tools/everything/README.md`; ES is MIT © voidtools);
 - `scan` is the historical path (glob + directory-name heuristics, misses deep virtualenvs); `envs`
   runs the plugins composed by `foolproof.composition.json`, falling back **index → es → walk** and
   printing which backend answered plus why the others did not (no index / Everything not running /
@@ -73,7 +73,7 @@ python requirements.py cli tasks                      # task log (JSONL operatio
 
 ## Configuration
 
-Edit `requirements_categories.json` to add or remove categories and packages. The format is
+Edit `foolproof_operation/requirements_categories.json` to add or remove categories and packages. The format is
 `{"Display name": "pip install target"}`:
 
 - **Ordinary packages**: the value is a PyPI package name, optionally with extras, e.g. `"fastapi": "fastapi[all]"`;

@@ -26,7 +26,7 @@ import subprocess
 from dataclasses import dataclass, field
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = ["PythonEnvironment", "ScannerService", "EVIDENCE_NAMES", "parse_pyvenv_cfg"]
 

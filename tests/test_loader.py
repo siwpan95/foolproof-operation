@@ -8,9 +8,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from core import Context, Loader, Row
-from core.events import EventBus
-from core.loader import (
+from foolproof_operation.core import Context, Loader, Row
+from foolproof_operation.core.events import EventBus
+from foolproof_operation.core.loader import (
     DEFAULT_ROWS,
     CompositionError,
     import_plugin,
@@ -105,16 +105,16 @@ class ParseRowsTest(unittest.TestCase):
 
 class ImportPluginTest(unittest.TestCase):
     def test_resolves_attr_and_module(self):
-        self.assertTrue(callable(import_plugin("core.events:bus_plugin")))
-        module = import_plugin("core.events")
-        self.assertIs(module, sys.modules["core.events"])
+        self.assertTrue(callable(import_plugin("foolproof_operation.core.events:bus_plugin")))
+        module = import_plugin("foolproof_operation.core.events")
+        self.assertIs(module, sys.modules["foolproof_operation.core.events"])
         self.assertTrue(callable(module.bus_plugin))
 
     def test_unknown_module_and_attr_fail_loud(self):
         with self.assertRaises(CompositionError):
             import_plugin("no.such.module:plugin")
         with self.assertRaises(CompositionError):
-            import_plugin("core.events:no_such_attr")
+            import_plugin("foolproof_operation.core.events:no_such_attr")
         with self.assertRaises(CompositionError):
             import_plugin("")
 
@@ -126,9 +126,9 @@ class LoadCompositionTest(unittest.TestCase):
         return tmp
 
     def test_reads_list_and_plugins_wrapper(self):
-        p1 = self._write(json.dumps([{"id": "bus", "plugin": "core.events:bus_plugin"}]))
+        p1 = self._write(json.dumps([{"id": "bus", "plugin": "foolproof_operation.core.events:bus_plugin"}]))
         self.assertEqual(load_composition(p1)[0].id, "bus")
-        p2 = self._write(json.dumps({"plugins": [{"id": "bus", "plugin": "core.events:bus_plugin"}]}))
+        p2 = self._write(json.dumps({"plugins": [{"id": "bus", "plugin": "foolproof_operation.core.events:bus_plugin"}]}))
         self.assertEqual(load_composition(p2)[0].id, "bus")
 
     def test_missing_file_and_bad_json_fail_loud(self):

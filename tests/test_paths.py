@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import unittest
 
-from index.paths import PathResolver
-from index.usn import (
+from foolproof_operation.index.paths import PathResolver
+from foolproof_operation.index.usn import (
     MFT_ROOT_INDEX,
     REASON_FILE_CREATE,
     REASON_FILE_DELETE,

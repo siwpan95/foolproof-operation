@@ -8,8 +8,8 @@ import sys
 import unittest
 from unittest import mock
 
-from index import usn
-from index.usn import (
+from foolproof_operation.index import usn
+from foolproof_operation.index.usn import (
     FRN_INDEX_MASK,
     MAX_USN,
     MFT_ROOT_INDEX,
@@ -243,7 +243,7 @@ class LiveVolumeTest(unittest.TestCase):
         cls.volumes = usn.list_ntfs_volumes()
 
     def test_enumerate_first_writable_volume(self):
-        from index.paths import PathResolver
+        from foolproof_operation.index.paths import PathResolver
 
         target = next((v for v in self.volumes if v != "C:"), None)
         if target is None:

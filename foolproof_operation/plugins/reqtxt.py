@@ -15,7 +15,7 @@ import os
 import re
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = ["ReqTxtService", "parse_requirements_txt", "parse_requirements_text"]
 

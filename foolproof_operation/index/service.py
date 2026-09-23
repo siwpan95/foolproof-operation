@@ -23,7 +23,7 @@ import threading
 import time
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 from .store import DEFAULT_BATCH_SIZE, IndexStore, StoreError
 from .usn import (

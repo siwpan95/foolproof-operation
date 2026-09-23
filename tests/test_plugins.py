@@ -14,9 +14,9 @@ import tempfile
 import unittest
 from unittest import mock
 
-from core.runtime import build_runtime, default_manifest_path, merge_row_config
-from plugins.scanner import EVIDENCE_NAMES, PythonEnvironment, ScannerService, parse_pyvenv_cfg
-from plugins.search import (
+from foolproof_operation.core.runtime import build_runtime, default_manifest_path, merge_row_config
+from foolproof_operation.plugins.scanner import EVIDENCE_NAMES, PythonEnvironment, ScannerService, parse_pyvenv_cfg
+from foolproof_operation.plugins.search import (
     EsBackend,
     IndexBackend,
     SearchBackend,
@@ -467,36 +467,31 @@ class CliIntegrationTest(unittest.TestCase):
         shutil.rmtree(self.tmpdir, ignore_errors=True)
 
     def test_envs_with_walk_backend_finds_env_in_temp_root(self):
-        import cli
-
+        from foolproof_operation import cli
         rc = cli.run_cli(["envs", "--backend", "walk", "--volumes", self.tmpdir])
         self.assertEqual(rc, 0)
 
     def test_envs_legacy_backend_on_temp_root(self):
-        import cli
-
+        from foolproof_operation import cli
         rc = cli.run_cli(["envs", "--backend", "legacy", "--volumes", self.tmpdir])
         self.assertEqual(rc, 0)
 
     def test_scan_defaults_to_original_backend(self):
         """`scan` 不带 --backend 时必须默认 walk（= 原 glob 口径，行为零变化）。"""
-        import cli
-
+        from foolproof_operation import cli
         args = cli.build_parser().parse_args(["scan"])
         self.assertEqual(args.backend, "walk")
 
     def test_envs_parser_defaults(self):
-        import cli
-
+        from foolproof_operation import cli
         args = cli.build_parser().parse_args(["envs"])
         self.assertEqual(args.backend, "auto")
         self.assertFalse(args.build)
         self.assertFalse(args.deep)
 
     def test_scan_with_index_backend_reports_provenance(self):
-        import cli
-
-        with mock.patch("core.runtime.build_runtime") as build:
+        from foolproof_operation import cli
+        with mock.patch("foolproof_operation.core.runtime.build_runtime") as build:
             rt = mock.MagicMock()
             rt.__enter__.return_value = rt
             scanner = mock.MagicMock()

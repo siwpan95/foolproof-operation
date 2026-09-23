@@ -18,7 +18,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = ["InstallerService", "OperationResult", "CheckResult"]
 

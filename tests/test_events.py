@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import unittest
 
-from core import Context
-from core.events import EventBus, bus_plugin
+from foolproof_operation.core import Context
+from foolproof_operation.core.events import EventBus, bus_plugin
 
 
 class EventBusTest(unittest.TestCase):

@@ -19,7 +19,7 @@ import subprocess
 import sys
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = ["PipService", "stderr_tail", "failure_hint", "DEFAULT_TIMEOUT", "REPAIR_METHODS"]
 

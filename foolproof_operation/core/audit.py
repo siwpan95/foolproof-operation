@@ -25,8 +25,8 @@ import os
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from core.context import Service
-from core.runtime import default_manifest_path
+from .context import Service
+from .runtime import default_manifest_path
 
 __all__ = ["AuditItem", "AuditService", "format_report", "LEVEL_ERROR", "LEVEL_WARN", "LEVEL_OK"]
 

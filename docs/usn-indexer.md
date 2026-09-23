@@ -122,16 +122,29 @@
 ### 4.1 分层（每层一个插件行，可独立卸载）
 
 ```
-core/context.py   内核：Context（provide/effect/fork/dispose）+ Service 基类
-core/events.py    事件总线（on/emit/waterfall），作为 'bus' 服务
-core/loader.py    配置装配：插件行声明（id/plugin/config/isolate）+ 事务化装配
-index/usn.py      USN/MFT 只读客户端（ctypes）
-index/paths.py    FRN → 路径还原（父链缓存 + rename/delete 处理）
-index/store.py    SQLite 索引（按卷分库 / WAL / JournalID 校验与重建判定 / 批量事务）
-index/service.py  索引服务（首次全量后台建库 + 增量同步 + 查询 API）
-plugins/*.py      功能行：categories / pip / installer / scanner / reqtxt / fileindex / search / gui / cli
-core/tasklog.py   任务日志 JSONL + 审计 CLI
-core/audit.py     启动审计 fail-loud（清单/路径/插件行校验）
+foolproof_operation/              包根（2026-09-23 起代码全部收进包内；仓库根只留兼容 shim
+                                  requirements.py / cli.py + 文档 + 测试 + 打包 spec）
+  core/context.py                 内核：Context（provide/effect/fork/isolate/dispose）+ Service 基类
+  core/events.py                  事件总线（on/emit/waterfall），作为 'bus' 服务
+  core/loader.py                  清单装配：插件行声明（id/plugin/config/isolate）+ 事务化装配
+  core/runtime.py                 装配助手（build_runtime，按行覆盖配置）
+  core/tasklog.py                 JSONL 操作流水（cli tasks 的数据源）
+  core/audit.py                   启动审计（cli doctor：清单/分类/索引/后端/日志）
+  index/usn.py                    USN/MFT 只读客户端（ctypes）
+  index/paths.py                  FRN → 路径还原（父链回溯 + rename/delete 处理）
+  index/store.py                  SQLite 索引（按卷分库 / WAL / JournalID 判定 / 批量事务）
+  index/service.py                索引服务（后台建库 + 增量同步 + 查询 API）
+  index/probe.py                  实盘基准探针（--store 产出落库/查询基准）
+  plugins/categories.py           分类清单 + 启动审计 + 规格拆分（清单即数据）
+  plugins/pip.py                  pip 子进程 + 报错解读 + 健康检查 + 修复
+  plugins/reqtxt.py               requirements.txt 解析 + 逐条安装编排
+  plugins/installer.py            安装/卸载/检查/升级编排（inject: pip + categories）
+  plugins/search.py               检索三后端 index → es → walk（全程溯源）
+  plugins/scanner.py              环境发现（证据优先 + legacy 兜底）
+  cli.py / gui.py                 命令行 / tkinter 界面
+  requirements_categories.json    分类清单（事实源，随包分发）
+  foolproof.composition.json      插件清单（随包分发）
+  tools/everything/               内置 es.exe（MIT © voidtools，随包分发）
 ```
 
 索引目录默认在 **用户级**（``%LOCALAPPDATA%\foolproof-operation\index``，可经

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import unittest
 
-from core import (
+from foolproof_operation.core import (
     Context,
     CordisError,
     DisposedError,

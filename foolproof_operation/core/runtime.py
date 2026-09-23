@@ -2,9 +2,9 @@
 
 把「怎么把插件行装起来」这件事从业务代码里抽出来，供 CLI / GUI / 脚本共用：
 
-    from core.runtime import build_runtime
+    from .runtime import build_runtime
 
-    with build_runtime() as rt:                 # 默认读仓库根的 foolproof.composition.json
+    with build_runtime() as rt:                 # 默认读包内的 foolproof.composition.json
         scanner = rt.ctx.get("scanner")
         environments = scanner.discover()
 
@@ -26,14 +26,14 @@ from .loader import DEFAULT_ROWS, Loader, Row, load_composition, parse_rows
 
 __all__ = ["Runtime", "build_runtime", "default_manifest_path", "merge_row_config"]
 
-#: 仓库根（core/ 的上一级）。
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#: 包根目录（core/ 的上一级）。
+PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #: 默认清单文件名。
 MANIFEST_NAME = "foolproof.composition.json"
 
 
 def default_manifest_path() -> str:
-    return os.path.join(REPO_ROOT, MANIFEST_NAME)
+    return os.path.join(PACKAGE_ROOT, MANIFEST_NAME)
 
 
 def merge_row_config(rows: Sequence[Any], overrides: Optional[Dict[str, Dict[str, Any]]]) -> list:
@@ -107,7 +107,7 @@ def build_runtime(
     """装配运行时。
 
     - ``rows`` 显式给出清单时不读文件（测试用）；
-    - ``manifest`` 缺省读 ``foolproof.composition.json``，文件缺失时回退内置 ``DEFAULT_ROWS``；
+    - ``manifest`` 缺省读包内 ``foolproof.composition.json``，文件缺失时回退内置 ``DEFAULT_ROWS``；
     - ``strict=True``（默认）时任何一行装配失败即整体回滚并抛错；
       ``strict=False`` 时逐行容错（失败的行走 ``loader.failed`` 记录），用于「尽力而为」的 GUI 场景。
     """

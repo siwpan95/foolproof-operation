@@ -13,9 +13,9 @@ import tempfile
 import unittest
 from unittest import mock
 
-from core.context import Context
-from core.runtime import build_runtime
-from plugins.categories import (
+from foolproof_operation.core.context import Context
+from foolproof_operation.core.runtime import build_runtime
+from foolproof_operation.plugins.categories import (
     AUTO_DISCOVERY_KEY,
     CategoriesError,
     CategoriesService,
@@ -30,9 +30,9 @@ from plugins.categories import (
     split_spec,
     target_of,
 )
-from plugins.installer import CheckResult, InstallerService, OperationResult
-from plugins.pip import PipService, failure_hint, stderr_tail
-from plugins.reqtxt import ReqTxtService, parse_requirements_text, parse_requirements_txt
+from foolproof_operation.plugins.installer import CheckResult, InstallerService, OperationResult
+from foolproof_operation.plugins.pip import PipService, failure_hint, stderr_tail
+from foolproof_operation.plugins.reqtxt import ReqTxtService, parse_requirements_text, parse_requirements_txt
 
 
 class CategoriesTest(unittest.TestCase):
@@ -397,10 +397,10 @@ class InstallerTest(unittest.TestCase):
         self.assertEqual(CheckResult("x", "1", None).status, "current")
 
     def test_missing_dependency_fails_loud(self):
-        from core.loader import CompositionError, Loader, Row
+        from foolproof_operation.core.loader import CompositionError, Loader, Row
 
         ctx = Context()
-        loader = Loader(ctx, [Row(id="installer", plugin="plugins.installer:InstallerService")])
+        loader = Loader(ctx, [Row(id="installer", plugin="foolproof_operation.plugins.installer:InstallerService")])
         with self.assertRaises(CompositionError) as cm:
             loader.mount_all()
         self.assertIn("pip", str(cm.exception))

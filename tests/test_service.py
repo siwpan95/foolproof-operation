@@ -10,7 +10,7 @@ import time
 import unittest
 from unittest import mock
 
-from index.service import (
+from foolproof_operation.index.service import (
     STATUS_BUILDING,
     STATUS_DENIED,
     STATUS_MISSING,
@@ -20,7 +20,7 @@ from index.service import (
     IndexService,
     default_index_dir,
 )
-from index.usn import (
+from foolproof_operation.index.usn import (
     MFT_ROOT_INDEX,
     REASON_FILE_CREATE,
     REASON_FILE_DELETE,
@@ -114,7 +114,7 @@ class ServiceFixture(unittest.TestCase):
         FakeVolume.tree = TREE
         FakeVolume.instances = []
         self.tmpdir = tempfile.mkdtemp(prefix="foolproof-service-")
-        self.patch = mock.patch("index.service.UsnVolume", FakeVolume)
+        self.patch = mock.patch("foolproof_operation.index.service.UsnVolume", FakeVolume)
         self.patch.start()
         self.service = IndexService(None, {"volumes": ["G:"], "index_dir": self.tmpdir})
 
@@ -313,7 +313,7 @@ class LiveIndexTest(unittest.TestCase):
     """实盘回归：真卷小样建库 + 真查询（默认跳过，避免把磁盘/权限依赖带进常规测试）。"""
 
     def setUp(self):
-        from index.usn import list_ntfs_volumes
+        from foolproof_operation.index.usn import list_ntfs_volumes
 
         self.volumes = [v for v in list_ntfs_volumes() if v != "C:"]
         if not self.volumes:
@@ -324,7 +324,7 @@ class LiveIndexTest(unittest.TestCase):
         shutil.rmtree(self.tmpdir, ignore_errors=True)
 
     def test_build_and_query_real_volume(self):
-        from index.service import STATUS_READY
+        from foolproof_operation.index.service import STATUS_READY
 
         service = IndexService(
             None,

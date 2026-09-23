@@ -22,7 +22,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
-from core.context import Service
+from ..core.context import Service
 
 __all__ = [
     "SearchHit",
@@ -54,8 +54,8 @@ DEFAULT_SKIP_DIRS = frozenset(
     }
 )
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_ES_EXE = os.path.join(REPO_ROOT, "tools", "everything", "es.exe")
+PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_ES_EXE = os.path.join(PACKAGE_ROOT, "tools", "everything", "es.exe")
 
 
 @dataclass

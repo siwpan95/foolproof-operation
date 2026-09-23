@@ -15,7 +15,7 @@ from collections import OrderedDict
 from pathlib import Path
 
 BASE = Path(__file__).parent
-JP = BASE / "requirements_categories.json"
+JP = BASE / "foolproof_operation" / "requirements_categories.json"
 AUTO = "🔍 自动发现"
 DEP = "📦 传递依赖"
 

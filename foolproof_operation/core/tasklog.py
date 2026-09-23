@@ -15,7 +15,7 @@ import os
 import time
 from typing import Any, Dict, List, Optional
 
-from core.context import Service
+from .context import Service
 
 __all__ = [
     "TaskLog",

@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 BASE = Path(__file__).parent
-JSON_PATH = BASE / "requirements_categories.json"
+JSON_PATH = BASE / "foolproof_operation" / "requirements_categories.json"
 FINAL = BASE / "retry_final_list.json"
 
 def norm(s):

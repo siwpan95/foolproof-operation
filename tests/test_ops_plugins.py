@@ -11,10 +11,10 @@ import tempfile
 import unittest
 from unittest import mock
 
-from core.audit import LEVEL_ERROR, LEVEL_OK, LEVEL_WARN, AuditItem, AuditService, format_report
-from core.context import Context
-from core.runtime import build_runtime
-from core.tasklog import TaskLog, read_events, summarize, tasklog_plugin
+from foolproof_operation.core.audit import LEVEL_ERROR, LEVEL_OK, LEVEL_WARN, AuditItem, AuditService, format_report
+from foolproof_operation.core.context import Context
+from foolproof_operation.core.runtime import build_runtime
+from foolproof_operation.core.tasklog import TaskLog, read_events, summarize, tasklog_plugin
 
 
 class TaskLogTest(unittest.TestCase):
@@ -256,9 +256,8 @@ class CliOpsTest(unittest.TestCase):
         shutil.rmtree(self.tmpdir, ignore_errors=True)
 
     def test_tasks_json_and_clear(self):
-        import cli
-
-        from core.tasklog import TaskLog
+        from foolproof_operation import cli
+        from foolproof_operation.core.tasklog import TaskLog
 
         TaskLog(self.path).record("install.done", count=2, ok=True)
         with contextlib.redirect_stdout(io.StringIO()):
@@ -269,21 +268,18 @@ class CliOpsTest(unittest.TestCase):
         self.assertEqual(TaskLog(self.path).events(), [])
 
     def test_tasks_empty_log_is_ok(self):
-        import cli
-
+        from foolproof_operation import cli
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(cli.run_cli(["tasks"]), 0)
 
     def test_doctor_returns_zero_when_healthy(self):
-        import cli
-
+        from foolproof_operation import cli
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(cli.run_cli(["doctor", "--json"]), 0)
 
     def test_every_subcommand_help_parses(self):
         """argparse 会把 help 文本当格式串：含 % 的写法（如 %LOCALAPPDATA%）会直接崩。"""
-        import cli
-
+        from foolproof_operation import cli
         parser = cli.build_parser()
         for name in ("list", "install", "uninstall", "check", "scan", "envs", "es", "tasks", "doctor"):
             with self.subTest(cmd=name):
@@ -293,8 +289,7 @@ class CliOpsTest(unittest.TestCase):
                 self.assertEqual(cm.exception.code, 0)
 
     def test_envs_and_scan_parsers_still_intact(self):
-        import cli
-
+        from foolproof_operation import cli
         parser = cli.build_parser()
         self.assertEqual(parser.parse_args(["scan"]).backend, "walk")
         self.assertEqual(parser.parse_args(["envs"]).backend, "auto")

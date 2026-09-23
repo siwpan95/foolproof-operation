@@ -1,0 +1,58 @@
+{
+  "plugins": [
+    {
+      "id": "bus",
+      "plugin": "foolproof_operation.core.events:bus_plugin"
+    },
+    {
+      "id": "tasklog",
+      "plugin": "foolproof_operation.core.tasklog:TaskLogService"
+    },
+    {
+      "id": "categories",
+      "plugin": "foolproof_operation.plugins.categories:CategoriesService"
+    },
+    {
+      "id": "pip",
+      "plugin": "foolproof_operation.plugins.pip:PipService"
+    },
+    {
+      "id": "installer",
+      "plugin": "foolproof_operation.plugins.installer:InstallerService"
+    },
+    {
+      "id": "reqtxt",
+      "plugin": "foolproof_operation.plugins.reqtxt:ReqTxtService"
+    },
+    {
+      "id": "fileindex",
+      "plugin": "foolproof_operation.index.service:IndexService",
+      "config": {
+        "auto_build": false,
+        "deadline_seconds": 300
+      }
+    },
+    {
+      "id": "search",
+      "plugin": "foolproof_operation.plugins.search:SearchService",
+      "config": {
+        "backend_order": [
+          "index",
+          "es",
+          "walk"
+        ]
+      }
+    },
+    {
+      "id": "scanner",
+      "plugin": "foolproof_operation.plugins.scanner:ScannerService",
+      "config": {
+        "limit_per_name": 2000
+      }
+    },
+    {
+      "id": "audit",
+      "plugin": "foolproof_operation.core.audit:AuditService"
+    }
+  ]
+}

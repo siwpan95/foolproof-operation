@@ -46,6 +46,14 @@
 
 ### Changed
 
+- **（结构层）代码收进 `foolproof_operation` 包**，为 PyPI 发布铺路：平铺的 `core/` `index/` `plugins/`
+  `cli.py` `requirements.py` 移入包目录（`gui.py`），清单与内置 es.exe 随包分发；包内导入改相对形式，
+  插件清单里的动态导入改全路径。仓库根保留 `requirements.py` / `cli.py` **兼容 shim**，
+  老命令 `python requirements.py cli …` 继续可用；新增 `python -m foolproof_operation [cli …]` 统一入口。
+  两个 PyInstaller spec 改为 `SPECPATH` 相对路径 + 包内资源 + 带包名的 `hiddenimports`。
+  **行为零变化**：与重构前快照对照，52 项可观测断言逐字一致。
+  原因：直接以平铺布局发布会在 site-packages 留下 `core/` `index/` `plugins/` 这类通用顶层名
+  （与其它包高概率冲突），且顶层绝对导入在安装后必然 ImportError。
 - README / README.en 去本地化：绝对路径改为 `<PATH>` 占位符，首屏补仓库链接与 MIT 许可声明；
   两版逐节对齐（章节 / 要点数 / 占位符数量一致），分类与库数统一为「24 分类 / 761 个库」。
 
