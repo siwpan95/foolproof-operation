@@ -1,0 +1,213 @@
+[
+  {
+    "volume": "C:",
+    "status": "ok",
+    "journal_id": 134049811186616011,
+    "journal_span": 38251448,
+    "records": 600000,
+    "rate": 49100.0,
+    "directories": 105807,
+    "skipped": 0,
+    "truncated": true,
+    "hits": {
+      "python.exe": 15,
+      "pythonw.exe": 14,
+      "pyvenv.cfg": 7,
+      "conda-meta": 0,
+      "site-packages": 11
+    },
+    "samples": {
+      "python.exe": [
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe"
+      ],
+      "pythonw.exe": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+        "C:\\tmp\\novel-test-venv\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.venv-html-to-docx\\Scripts\\pythonw.exe"
+      ],
+      "pyvenv.cfg": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\pyvenv.cfg",
+        "C:\\tmp\\novel-test-venv\\pyvenv.cfg",
+        "C:\\Users\\13122\\.venv-html-to-docx\\pyvenv.cfg"
+      ],
+      "conda-meta": [],
+      "site-packages": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages",
+        "C:\\tmp\\novel-test-venv\\Lib\\site-packages",
+        "C:\\Users\\13122\\.venv-html-to-docx\\Lib\\site-packages"
+      ]
+    },
+    "seconds": 12.22,
+    "error": "",
+    "calls": 259
+  },
+  {
+    "volume": "D:",
+    "status": "ok",
+    "journal_id": 134292484246757530,
+    "journal_span": 9109400,
+    "records": 57756,
+    "rate": 99579.0,
+    "directories": 2232,
+    "skipped": 0,
+    "truncated": false,
+    "hits": {
+      "python.exe": 1,
+      "pythonw.exe": 1,
+      "pyvenv.cfg": 1,
+      "conda-meta": 0,
+      "site-packages": 1
+    },
+    "samples": {
+      "python.exe": [
+        "D:\\webcopier\\.venv\\Scripts\\python.exe"
+      ],
+      "pythonw.exe": [
+        "D:\\webcopier\\.venv\\Scripts\\pythonw.exe"
+      ],
+      "pyvenv.cfg": [
+        "D:\\webcopier\\.venv\\pyvenv.cfg"
+      ],
+      "conda-meta": [],
+      "site-packages": [
+        "D:\\webcopier\\.venv\\Lib\\site-packages"
+      ]
+    },
+    "seconds": 0.58,
+    "error": "",
+    "calls": 26
+  },
+  {
+    "volume": "E:",
+    "status": "ok",
+    "journal_id": 134292484247665928,
+    "journal_span": 9314600,
+    "records": 67832,
+    "rate": 45525.0,
+    "directories": 4148,
+    "skipped": 0,
+    "truncated": false,
+    "hits": {
+      "python.exe": 3,
+      "pythonw.exe": 3,
+      "pyvenv.cfg": 3,
+      "conda-meta": 0,
+      "site-packages": 3
+    },
+    "samples": {
+      "python.exe": [
+        "E:\\RolePlayer\\.venv\\Scripts\\python.exe",
+        "E:\\D21\\.venv\\Scripts\\python.exe",
+        "E:\\moba_battle_platform\\.venv\\Scripts\\python.exe"
+      ],
+      "pythonw.exe": [
+        "E:\\RolePlayer\\.venv\\Scripts\\pythonw.exe",
+        "E:\\D21\\.venv\\Scripts\\pythonw.exe",
+        "E:\\moba_battle_platform\\.venv\\Scripts\\pythonw.exe"
+      ],
+      "pyvenv.cfg": [
+        "E:\\RolePlayer\\.venv\\pyvenv.cfg",
+        "E:\\D21\\.venv\\pyvenv.cfg",
+        "E:\\moba_battle_platform\\.venv\\pyvenv.cfg"
+      ],
+      "conda-meta": [],
+      "site-packages": [
+        "E:\\RolePlayer\\.venv\\Lib\\site-packages",
+        "E:\\D21\\.venv\\Lib\\site-packages",
+        "E:\\moba_battle_platform\\.venv\\Lib\\site-packages"
+      ]
+    },
+    "seconds": 1.49,
+    "error": "",
+    "calls": 25
+  },
+  {
+    "volume": "F:",
+    "status": "ok",
+    "journal_id": 134231241952907438,
+    "journal_span": 39219992,
+    "records": 600000,
+    "rate": 25663.0,
+    "directories": 45306,
+    "skipped": 0,
+    "truncated": true,
+    "hits": {
+      "python.exe": 6,
+      "pythonw.exe": 6,
+      "pyvenv.cfg": 2,
+      "conda-meta": 0,
+      "site-packages": 9
+    },
+    "samples": {
+      "python.exe": [
+        "F:\\Python314_embed_backup\\python.exe",
+        "F:\\Python314\\python.exe",
+        "F:\\venvs\\gotocr\\Scripts\\python.exe"
+      ],
+      "pythonw.exe": [
+        "F:\\Python314_embed_backup\\pythonw.exe",
+        "F:\\Python314\\pythonw.exe",
+        "F:\\venvs\\gotocr\\Scripts\\pythonw.exe"
+      ],
+      "pyvenv.cfg": [
+        "F:\\venvs\\gotocr\\pyvenv.cfg",
+        "F:\\venvs\\nd-build\\pyvenv.cfg"
+      ],
+      "conda-meta": [],
+      "site-packages": [
+        "F:\\Python314_embed_backup\\Lib\\site-packages",
+        "F:\\mingw64\\mingw64\\opt\\lib\\python3.14\\site-packages",
+        "F:\\andriod\\plugins\\android-ndk\\resources\\lldb\\lib\\site-packages"
+      ]
+    },
+    "seconds": 23.38,
+    "error": "",
+    "calls": 241
+  },
+  {
+    "volume": "G:",
+    "status": "ok",
+    "journal_id": 134287193248862055,
+    "journal_span": 33638808,
+    "records": 600000,
+    "rate": 133630.0,
+    "directories": 46810,
+    "skipped": 0,
+    "truncated": true,
+    "hits": {
+      "python.exe": 13,
+      "pythonw.exe": 13,
+      "pyvenv.cfg": 13,
+      "conda-meta": 0,
+      "site-packages": 13
+    },
+    "samples": {
+      "python.exe": [
+        "G:\\notpython\\kard_CN\\venv\\Scripts\\python.exe",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\python.exe"
+      ],
+      "pythonw.exe": [
+        "G:\\notpython\\kard_CN\\venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\pythonw.exe"
+      ],
+      "pyvenv.cfg": [
+        "G:\\notpython\\kard_CN\\venv\\pyvenv.cfg",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\pyvenv.cfg"
+      ],
+      "conda-meta": [],
+      "site-packages": [
+        "G:\\notpython\\kard_CN\\venv\\Lib\\site-packages",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Lib\\site-packages",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Lib\\site-packages"
+      ]
+    },
+    "seconds": 4.49,
+    "error": "",
+    "calls": 250
+  }
+]

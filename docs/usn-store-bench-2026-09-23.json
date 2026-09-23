@@ -1,0 +1,117 @@
+[
+  {
+    "volume": "C:",
+    "status": "ok",
+    "build_seconds": 12.18,
+    "records": 1018935,
+    "rows_per_second": 83629.0,
+    "index_seconds": 2.57,
+    "db_bytes": 95584256,
+    "query_ms_avg": 0.13,
+    "query_ms_max": 0.69,
+    "resolve_ms_avg": 0.06,
+    "hits": {
+      "python.exe": 17,
+      "pythonw.exe": 16,
+      "pyvenv.cfg": 7,
+      "conda-meta": 0,
+      "site-packages": 14
+    },
+    "error": "",
+    "journal_id": 134049811186616011,
+    "next_usn": 8984046072,
+    "resolved": 54
+  },
+  {
+    "volume": "D:",
+    "status": "ok",
+    "build_seconds": 0.66,
+    "records": 57756,
+    "rows_per_second": 87346.0,
+    "index_seconds": 0.17,
+    "db_bytes": 5701632,
+    "query_ms_avg": 0.02,
+    "query_ms_max": 0.08,
+    "resolve_ms_avg": 0.033,
+    "hits": {
+      "python.exe": 1,
+      "pythonw.exe": 1,
+      "pyvenv.cfg": 1,
+      "conda-meta": 0,
+      "site-packages": 1
+    },
+    "error": "",
+    "journal_id": 134292484246757530,
+    "next_usn": 117112728,
+    "resolved": 4
+  },
+  {
+    "volume": "E:",
+    "status": "ok",
+    "build_seconds": 0.67,
+    "records": 67833,
+    "rows_per_second": 101880.0,
+    "index_seconds": 0.17,
+    "db_bytes": 4722688,
+    "query_ms_avg": 0.03,
+    "query_ms_max": 0.1,
+    "resolve_ms_avg": 0.028,
+    "hits": {
+      "python.exe": 3,
+      "pythonw.exe": 3,
+      "pyvenv.cfg": 3,
+      "conda-meta": 0,
+      "site-packages": 3
+    },
+    "error": "",
+    "journal_id": 134292484247665928,
+    "next_usn": 75411952,
+    "resolved": 12
+  },
+  {
+    "volume": "F:",
+    "status": "ok",
+    "build_seconds": 11.01,
+    "records": 1126708,
+    "rows_per_second": 102347.0,
+    "index_seconds": 2.49,
+    "db_bytes": 92196864,
+    "query_ms_avg": 0.16,
+    "query_ms_max": 0.97,
+    "resolve_ms_avg": 0.056,
+    "hits": {
+      "python.exe": 18,
+      "pythonw.exe": 16,
+      "pyvenv.cfg": 9,
+      "conda-meta": 0,
+      "site-packages": 24
+    },
+    "error": "",
+    "journal_id": 134231241952907438,
+    "next_usn": 1238791376,
+    "resolved": 67
+  },
+  {
+    "volume": "G:",
+    "status": "ok",
+    "build_seconds": 25.96,
+    "records": 2518517,
+    "rows_per_second": 97029.0,
+    "index_seconds": 5.64,
+    "db_bytes": 250396672,
+    "query_ms_avg": 1.46,
+    "query_ms_max": 3.13,
+    "resolve_ms_avg": 0.042,
+    "hits": {
+      "python.exe": 169,
+      "pythonw.exe": 169,
+      "pyvenv.cfg": 167,
+      "conda-meta": 0,
+      "site-packages": 169
+    },
+    "error": "",
+    "journal_id": 134287193248862055,
+    "next_usn": 2609051552,
+    "resolved": 674
+  }
+]

@@ -1,0 +1,3768 @@
+{
+  "count": 208,
+  "backend": "index",
+  "environments": [
+    {
+      "root": "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3",
+      "kind": "standalone",
+      "python_exe": "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\python.exe",
+      "pythonw_exe": "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\pythonw.exe",
+      "site_packages": "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\python.exe",
+        "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\pythonw.exe",
+        "C:\\Program Files (x86)\\Android\\AndroidNDK\\android-ndk-r27c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\python3\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.PythonManager_26.3.240.0_x64__3847v3x7pw1km",
+      "kind": "standalone",
+      "python_exe": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.PythonManager_26.3.240.0_x64__3847v3x7pw1km\\python.exe",
+      "pythonw_exe": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.PythonManager_26.3.240.0_x64__3847v3x7pw1km\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.PythonManager_26.3.240.0_x64__3847v3x7pw1km\\python.exe",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.PythonManager_26.3.240.0_x64__3847v3x7pw1km\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\tmp\\novel-test-venv",
+      "kind": "venv",
+      "python_exe": "C:\\tmp\\novel-test-venv\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\tmp\\novel-test-venv\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\tmp\\novel-test-venv\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\tmp\\novel-test-venv\\Scripts\\python.exe",
+        "C:\\tmp\\novel-test-venv\\Scripts\\pythonw.exe",
+        "C:\\tmp\\novel-test-venv\\pyvenv.cfg",
+        "C:\\tmp\\novel-test-venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\tmp\\venv_photo2",
+      "kind": "venv",
+      "python_exe": "C:\\tmp\\venv_photo2\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\tmp\\venv_photo2\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\tmp\\venv_photo2\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\tmp\\venv_photo2\\Scripts\\python.exe",
+        "C:\\tmp\\venv_photo2\\Scripts\\pythonw.exe",
+        "C:\\tmp\\venv_photo2\\pyvenv.cfg",
+        "C:\\tmp\\venv_photo2\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.venv-html-to-docx",
+      "kind": "venv",
+      "python_exe": "C:\\Users\\13122\\.venv-html-to-docx\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.venv-html-to-docx\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.venv-html-to-docx\\Lib\\site-packages",
+      "version": null,
+      "base": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none",
+      "evidence": [
+        "C:\\Users\\13122\\.venv-html-to-docx\\Scripts\\python.exe",
+        "C:\\Users\\13122\\.venv-html-to-docx\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.venv-html-to-docx\\pyvenv.cfg",
+        "C:\\Users\\13122\\.venv-html-to-docx\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": false,
+      "detail": "疑似 CPython venv 模板资产（Lib/venv/scripts/nt|posix），非独立环境"
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default",
+      "kind": "venv",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\pyvenv.cfg",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp",
+      "kind": "venv",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\pyvenv.cfg",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild",
+      "kind": "venv",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\pyvenv.cfg",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest",
+      "kind": "venv",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\pyvenv.cfg",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\pythonw.exe",
+        "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\python.exe",
+        "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\pythonw.exe",
+        "C:\\Users\\13122\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\9f6d27f23933fb44a3a1c728c88a5ce4\\python\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\python.exe",
+      "pythonw_exe": null,
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\python.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.PythonManager_3847v3x7pw1km",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.PythonManager_3847v3x7pw1km\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.PythonManager_3847v3x7pw1km\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.PythonManager_3847v3x7pw1km\\python.exe",
+        "C:\\Users\\13122\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.PythonManager_3847v3x7pw1km\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\pythonw.exe",
+      "site_packages": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\python.exe",
+        "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\pythonw.exe",
+        "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\venv\\scripts\\nt",
+      "kind": "standalone",
+      "python_exe": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\venv\\scripts\\nt\\python.exe",
+      "pythonw_exe": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\venv\\scripts\\nt\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\venv\\scripts\\nt\\python.exe",
+        "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\venv\\scripts\\nt\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": false,
+      "detail": "疑似 CPython venv 模板资产（Lib/venv/scripts/nt|posix），非独立环境"
+    },
+    {
+      "root": "D:\\webcopier\\.venv",
+      "kind": "venv",
+      "python_exe": "D:\\webcopier\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "D:\\webcopier\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "D:\\webcopier\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "D:\\webcopier\\.venv\\Scripts\\python.exe",
+        "D:\\webcopier\\.venv\\Scripts\\pythonw.exe",
+        "D:\\webcopier\\.venv\\pyvenv.cfg",
+        "D:\\webcopier\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "E:\\D21\\.venv",
+      "kind": "venv",
+      "python_exe": "E:\\D21\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "E:\\D21\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "E:\\D21\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "E:\\D21\\.venv\\Scripts\\python.exe",
+        "E:\\D21\\.venv\\Scripts\\pythonw.exe",
+        "E:\\D21\\.venv\\pyvenv.cfg",
+        "E:\\D21\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "E:\\moba_battle_platform\\.venv",
+      "kind": "venv",
+      "python_exe": "E:\\moba_battle_platform\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "E:\\moba_battle_platform\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "E:\\moba_battle_platform\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "E:\\moba_battle_platform\\.venv\\Scripts\\python.exe",
+        "E:\\moba_battle_platform\\.venv\\Scripts\\pythonw.exe",
+        "E:\\moba_battle_platform\\.venv\\pyvenv.cfg",
+        "E:\\moba_battle_platform\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "E:\\RolePlayer\\.venv",
+      "kind": "venv",
+      "python_exe": "E:\\RolePlayer\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "E:\\RolePlayer\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "E:\\RolePlayer\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "E:\\RolePlayer\\.venv\\Scripts\\python.exe",
+        "E:\\RolePlayer\\.venv\\Scripts\\pythonw.exe",
+        "E:\\RolePlayer\\.venv\\pyvenv.cfg",
+        "E:\\RolePlayer\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Libre\\program",
+      "kind": "standalone",
+      "python_exe": "F:\\Libre\\program\\python.exe",
+      "pythonw_exe": null,
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Libre\\program\\python.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Libre\\program\\python-core-3.13.15",
+      "kind": "standalone",
+      "python_exe": null,
+      "pythonw_exe": null,
+      "site_packages": "F:\\Libre\\program\\python-core-3.13.15\\lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Libre\\program\\python-core-3.13.15\\bin\\python.exe",
+        "F:\\Libre\\program\\python-core-3.13.15\\bin\\pythonw.exe",
+        "F:\\Libre\\program\\python-core-3.13.15\\lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Python",
+      "kind": "standalone",
+      "python_exe": null,
+      "pythonw_exe": null,
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Python\\bin\\python.exe",
+        "F:\\Python\\bin\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Python314",
+      "kind": "standalone",
+      "python_exe": "F:\\Python314\\python.exe",
+      "pythonw_exe": "F:\\Python314\\pythonw.exe",
+      "site_packages": "F:\\Python314\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Python314\\python.exe",
+        "F:\\Python314\\pythonw.exe",
+        "F:\\Python314\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Python314_embed_backup",
+      "kind": "embed",
+      "python_exe": "F:\\Python314_embed_backup\\python.exe",
+      "pythonw_exe": "F:\\Python314_embed_backup\\pythonw.exe",
+      "site_packages": "F:\\Python314_embed_backup\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Python314_embed_backup\\python.exe",
+        "F:\\Python314_embed_backup\\pythonw.exe",
+        "F:\\Python314_embed_backup\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\Python\\pythoncore-3.14-64",
+      "kind": "standalone",
+      "python_exe": "F:\\Python\\pythoncore-3.14-64\\python.exe",
+      "pythonw_exe": "F:\\Python\\pythoncore-3.14-64\\pythonw.exe",
+      "site_packages": "F:\\Python\\pythoncore-3.14-64\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\Python\\pythoncore-3.14-64\\python.exe",
+        "F:\\Python\\pythoncore-3.14-64\\pythonw.exe",
+        "F:\\Python\\pythoncore-3.14-64\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\steam\\steamapps\\common\\Blender\\5.2\\python",
+      "kind": "standalone",
+      "python_exe": null,
+      "pythonw_exe": null,
+      "site_packages": "F:\\steam\\steamapps\\common\\Blender\\5.2\\python\\lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\steam\\steamapps\\common\\Blender\\5.2\\python\\bin\\python.exe",
+        "F:\\steam\\steamapps\\common\\Blender\\5.2\\python\\lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64",
+      "kind": "standalone",
+      "python_exe": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+      "pythonw_exe": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\pythonw.exe",
+      "site_packages": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\python.exe",
+        "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\pythonw.exe",
+        "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\venv\\scripts\\nt",
+      "kind": "standalone",
+      "python_exe": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\venv\\scripts\\nt\\python.exe",
+      "pythonw_exe": "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\venv\\scripts\\nt\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\venv\\scripts\\nt\\python.exe",
+        "F:\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\venv\\scripts\\nt\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": false,
+      "detail": "疑似 CPython venv 模板资产（Lib/venv/scripts/nt|posix），非独立环境"
+    },
+    {
+      "root": "F:\\venvs\\gotocr",
+      "kind": "venv",
+      "python_exe": "F:\\venvs\\gotocr\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\venvs\\gotocr\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\venvs\\gotocr\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\venvs\\gotocr\\Scripts\\python.exe",
+        "F:\\venvs\\gotocr\\Scripts\\pythonw.exe",
+        "F:\\venvs\\gotocr\\pyvenv.cfg",
+        "F:\\venvs\\gotocr\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\venvs\\nd-build",
+      "kind": "venv",
+      "python_exe": "F:\\venvs\\nd-build\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\venvs\\nd-build\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\venvs\\nd-build\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "F:\\venvs\\nd-build\\Scripts\\python.exe",
+        "F:\\venvs\\nd-build\\Scripts\\pythonw.exe",
+        "F:\\venvs\\nd-build\\pyvenv.cfg",
+        "F:\\venvs\\nd-build\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\venvs\\probe",
+      "kind": "venv",
+      "python_exe": "F:\\venvs\\probe\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\venvs\\probe\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\venvs\\probe\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\venvs\\probe\\Scripts\\python.exe",
+        "F:\\venvs\\probe\\Scripts\\pythonw.exe",
+        "F:\\venvs\\probe\\pyvenv.cfg",
+        "F:\\venvs\\probe\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\pyvenv.cfg",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Scripts\\python.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Scripts\\pythonw.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\pyvenv.cfg",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\doom-test\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\pyvenv.cfg",
+        "F:\\备份\\c\\Users\\13122\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\c\\Users\\13122\\venv_photo",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\c\\Users\\13122\\venv_photo\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\c\\Users\\13122\\venv_photo\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\c\\Users\\13122\\venv_photo\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\备份\\c\\Users\\13122\\venv_photo\\Scripts\\python.exe",
+        "F:\\备份\\c\\Users\\13122\\venv_photo\\Scripts\\pythonw.exe",
+        "F:\\备份\\c\\Users\\13122\\venv_photo\\pyvenv.cfg",
+        "F:\\备份\\c\\Users\\13122\\venv_photo\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\g\\local\\mdviewer_build\\venv",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\g\\local\\mdviewer_build\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\g\\local\\mdviewer_build\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\g\\local\\mdviewer_build\\venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "F:\\备份\\g\\local\\mdviewer_build\\venv\\Scripts\\python.exe",
+        "F:\\备份\\g\\local\\mdviewer_build\\venv\\Scripts\\pythonw.exe",
+        "F:\\备份\\g\\local\\mdviewer_build\\venv\\pyvenv.cfg",
+        "F:\\备份\\g\\local\\mdviewer_build\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "F:\\备份\\g\\tools\\sfx\\.venv",
+      "kind": "venv",
+      "python_exe": "F:\\备份\\g\\tools\\sfx\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "F:\\备份\\g\\tools\\sfx\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "F:\\备份\\g\\tools\\sfx\\.venv\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "F:\\备份\\g\\tools\\sfx\\.venv\\Scripts\\python.exe",
+        "F:\\备份\\g\\tools\\sfx\\.venv\\Scripts\\pythonw.exe",
+        "F:\\备份\\g\\tools\\sfx\\.venv\\pyvenv.cfg",
+        "F:\\备份\\g\\tools\\sfx\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Scripts\\python.exe",
+        "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Scripts\\pythonw.exe",
+        "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\pyvenv.cfg",
+        "G:\\archive\\allin_engine.tools-game.retired-2026-08-23\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Scripts\\python.exe",
+        "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Scripts\\pythonw.exe",
+        "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\pyvenv.cfg",
+        "G:\\archive\\老爬虫四件-20260827\\SohuNewCrawler\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Scripts\\python.exe",
+        "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Scripts\\pythonw.exe",
+        "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\pyvenv.cfg",
+        "G:\\archive\\老爬虫四件-20260827\\TaobaoCrawler\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Scripts\\python.exe",
+        "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Scripts\\pythonw.exe",
+        "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\pyvenv.cfg",
+        "G:\\archive\\老爬虫四件-20260827\\XianyuCrawler\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Scripts\\python.exe",
+        "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Scripts\\pythonw.exe",
+        "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\pyvenv.cfg",
+        "G:\\archive\\老爬虫四件-20260827\\ZhaopinCrawler\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\assets\\csmusic\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\assets\\csmusic\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\assets\\csmusic\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\assets\\csmusic\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\assets\\csmusic\\.venv\\Scripts\\python.exe",
+        "G:\\assets\\csmusic\\.venv\\Scripts\\pythonw.exe",
+        "G:\\assets\\csmusic\\.venv\\pyvenv.cfg",
+        "G:\\assets\\csmusic\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\assets\\fonts\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\assets\\fonts\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\assets\\fonts\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\assets\\fonts\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\assets\\fonts\\.venv\\Scripts\\python.exe",
+        "G:\\assets\\fonts\\.venv\\Scripts\\pythonw.exe",
+        "G:\\assets\\fonts\\.venv\\pyvenv.cfg",
+        "G:\\assets\\fonts\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\assets\\radio_special_instruments\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\assets\\radio_special_instruments\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\assets\\radio_special_instruments\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\assets\\radio_special_instruments\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\assets\\radio_special_instruments\\.venv\\Scripts\\python.exe",
+        "G:\\assets\\radio_special_instruments\\.venv\\Scripts\\pythonw.exe",
+        "G:\\assets\\radio_special_instruments\\.venv\\pyvenv.cfg",
+        "G:\\assets\\radio_special_instruments\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\art\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\art\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\art\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\art\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\art\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\art\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\art\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\art\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\create\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\create\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\create\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\create\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\create\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\create\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\create\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\create\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\draw\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\draw\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\draw\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\draw\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\draw\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\draw\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\draw\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\draw\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\lap\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\lap\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\lap\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\lap\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\lap\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\lap\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\lap\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\lap\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\lap\\project1\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\lap\\project1\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\lap\\project1\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\lap\\project1\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\lap\\project1\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\lap\\project1\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\lap\\project1\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\lap\\project1\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\wallpaper1\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\wallpaper1\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\wallpaper1\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\wallpaper1\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\wallpaper1\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\wallpaper1\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\wallpaper1\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\wallpaper1\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\media-archive\\wallpaper2\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\media-archive\\wallpaper2\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\media-archive\\wallpaper2\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\media-archive\\wallpaper2\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\media-archive\\wallpaper2\\.venv\\Scripts\\python.exe",
+        "G:\\local\\media-archive\\wallpaper2\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\media-archive\\wallpaper2\\.venv\\pyvenv.cfg",
+        "G:\\local\\media-archive\\wallpaper2\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\pq-multiverse\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\pq-multiverse\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\pq-multiverse\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\pq-multiverse\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\pq-multiverse\\.venv\\Scripts\\python.exe",
+        "G:\\local\\pq-multiverse\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\pq-multiverse\\.venv\\pyvenv.cfg",
+        "G:\\local\\pq-multiverse\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\stay\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\stay\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\stay\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\stay\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\stay\\.venv\\Scripts\\python.exe",
+        "G:\\local\\stay\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\stay\\.venv\\pyvenv.cfg",
+        "G:\\local\\stay\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\local\\tools-archive\\faatt_archived\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\local\\tools-archive\\faatt_archived\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\local\\tools-archive\\faatt_archived\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\local\\tools-archive\\faatt_archived\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\local\\tools-archive\\faatt_archived\\.venv\\Scripts\\python.exe",
+        "G:\\local\\tools-archive\\faatt_archived\\.venv\\Scripts\\pythonw.exe",
+        "G:\\local\\tools-archive\\faatt_archived\\.venv\\pyvenv.cfg",
+        "G:\\local\\tools-archive\\faatt_archived\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\AI-NovelsGenerator-main\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\AI-NovelsGenerator-main\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\cheatcard\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\cheatcard\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\cheatcard\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\cheatcard\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\cheatcard\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\cheatcard\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\cheatcard\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\cheatcard\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ChineseAiDungeon-main\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ChineseAiDungeon-main\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ChineseAiDungeon-main\\CPM-Generate\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ComfyUI-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ComfyUI-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ComfyUI-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ComfyUI-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ComfyUI-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ComfyUI-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ComfyUI-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ComfyUI-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ComfyUI-master\\tests-unit\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\darksouls_cli\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\darksouls_cli\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\darksouls_cli\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\darksouls_cli\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\darksouls_cli\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\darksouls_cli\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\darksouls_cli\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\darksouls_cli\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\DouZero-main\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\DouZero-main\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\DouZero-main\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\DouZero-main\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\DouZero-main\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\DouZero-main\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\DouZero-main\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\DouZero-main\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\DrissionPage-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\DrissionPage-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\DrissionPage-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\DrissionPage-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\DrissionPage-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\DrissionPage-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\DrissionPage-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\DrissionPage-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ECommerceCrawlers-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ECommerceCrawlers-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ECommerceCrawlers-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\Fictionist-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\Fictionist-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\Fictionist-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\Fictionist-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\Fictionist-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\Fictionist-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\Fictionist-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\Fictionist-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\firefly-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\firefly-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\firefly-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\firefly-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\firefly-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\firefly-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\firefly-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\firefly-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\kard_CN\\venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\kard_CN\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\kard_CN\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\kard_CN\\venv\\Lib\\site-packages",
+      "version": "3.13.12",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\notpython\\kard_CN\\venv\\Scripts\\python.exe",
+        "G:\\notpython\\kard_CN\\venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\kard_CN\\venv\\pyvenv.cfg",
+        "G:\\notpython\\kard_CN\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\krieger-clone\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\krieger-clone\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\krieger-clone\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\krieger-clone\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\krieger-clone\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\krieger-clone\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\krieger-clone\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\krieger-clone\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\merged_gui\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\merged_gui\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\merged_gui\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\merged_gui\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\merged_gui\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\merged_gui\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\merged_gui\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\merged_gui\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\mindspore-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\mindspore-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\mindspore-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\mindspore-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\mindspore-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\mindspore-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\mindspore-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\mindspore-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\mindspore-master\\mindspore\\python\\mindspore\\dataset\\utils\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\mindspore-master\\tests\\st\\networks\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\MusicStudioPro\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\MusicStudioPro\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\MusicStudioPro\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\MusicStudioPro\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\MusicStudioPro\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\MusicStudioPro\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\MusicStudioPro\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\MusicStudioPro\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\obEspoir-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\obEspoir-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\obEspoir-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\obEspoir-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\obEspoir-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\obEspoir-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\obEspoir-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\obEspoir-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\pq6-4-4\\jindutiao\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\pq6-4-4\\jindutiao\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\pro2\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\pro2\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\pro2\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\pro2\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\pro2\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\pro2\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\pro2\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\pro2\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\Python-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\Python-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\Python-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\Python-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\Python-master\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\Python-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\Python-master\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\Python-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\search_word\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\search_word\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\search_word\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\search_word\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\search_word\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\search_word\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\search_word\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\search_word\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\SerpentAI-dev\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\SerpentAI-dev\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\SerpentAI-dev\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\SerpentAI-dev\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\SerpentAI-dev\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\SerpentAI-dev\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\SerpentAI-dev\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\SerpentAI-dev\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Scripts\\python.exe",
+        "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Scripts\\pythonw.exe",
+        "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\pyvenv.cfg",
+        "G:\\notpython\\ShicimingjuCrawleAndDisplay\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\adventurelog\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\adventurelog\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\adventurelog\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\adventurelog\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\adventurelog\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\adventurelog\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\adventurelog\\.venv\\pyvenv.cfg",
+        "G:\\repos\\adventurelog\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\an-engine\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\an-engine\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\an-engine\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\an-engine\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\an-engine\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\an-engine\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\an-engine\\.venv\\pyvenv.cfg",
+        "G:\\repos\\an-engine\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\2048\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\2048\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\2048\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\2048\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\2048\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\2048\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\2048\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\2048\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\calculator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\calculator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\calculator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\calculator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\calculator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\calculator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\calculator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\calculator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\kid-a-walker\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\kid-a-walker\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\moyuxiaqi\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\puzzle\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\puzzle\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\puzzle\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\puzzle\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\puzzle\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\puzzle\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\puzzle\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\puzzle\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\rider\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\rider\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\rider\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\rider\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\rider\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\rider\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\rider\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\rider\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\sixone\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\sixone\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\sixone\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\sixone\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\sixone\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\sixone\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\sixone\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\sixone\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\ski\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\ski\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\ski\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\ski\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\ski\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\ski\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\ski\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\ski\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\tetris\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\tetris\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\tetris\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\tetris\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\tetris\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\tetris\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\tetris\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\tetris\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\arcade\\games\\tictactoe\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\arcade\\games\\tictactoe\\.venv\\pyvenv.cfg",
+        "G:\\repos\\arcade\\games\\tictactoe\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\art_video_gen\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\art_video_gen\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\art_video_gen\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\art_video_gen\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\art_video_gen\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\art_video_gen\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\art_video_gen\\.venv\\pyvenv.cfg",
+        "G:\\repos\\art_video_gen\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audio-generation\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audio-generation\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audio-generation\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audio-generation\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audio-generation\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\audio-generation\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audio-generation\\.venv\\pyvenv.cfg",
+        "G:\\repos\\audio-generation\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audio-generation\\autowav\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audio-generation\\autowav\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audio-generation\\autowav\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audio-generation\\autowav\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audio-generation\\autowav\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\audio-generation\\autowav\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audio-generation\\autowav\\.venv\\pyvenv.cfg",
+        "G:\\repos\\audio-generation\\autowav\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audio-generation\\pipeline\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audio-generation\\pipeline\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audio-generation\\pipeline\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audio-generation\\pipeline\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audio-generation\\pipeline\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\audio-generation\\pipeline\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audio-generation\\pipeline\\.venv\\pyvenv.cfg",
+        "G:\\repos\\audio-generation\\pipeline\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audio-pipeline\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audio-pipeline\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audio-pipeline\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audio-pipeline\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audio-pipeline\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\audio-pipeline\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audio-pipeline\\.venv\\pyvenv.cfg",
+        "G:\\repos\\audio-pipeline\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audio-separator\\venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audio-separator\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audio-separator\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audio-separator\\venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audio-separator\\venv\\Scripts\\python.exe",
+        "G:\\repos\\audio-separator\\venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audio-separator\\venv\\pyvenv.cfg",
+        "G:\\repos\\audio-separator\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\audiotool\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\audiotool\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\audiotool\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\audiotool\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\audiotool\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\audiotool\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\audiotool\\.venv\\pyvenv.cfg",
+        "G:\\repos\\audiotool\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\auto_clicker\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\auto_clicker\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\auto_clicker\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\auto_clicker\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\auto_clicker\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\auto_clicker\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\auto_clicker\\.venv\\pyvenv.cfg",
+        "G:\\repos\\auto_clicker\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\bee\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\bee\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\bee\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\bee\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\bee\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\bee\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\bee\\.venv\\pyvenv.cfg",
+        "G:\\repos\\bee\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\bilibili-helper-py\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\bilibili-helper-py\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\bilibili-helper-py\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\bilibili-helper-py\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\bilibili-helper-py\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\bilibili-helper-py\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\bilibili-helper-py\\.venv\\pyvenv.cfg",
+        "G:\\repos\\bilibili-helper-py\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\captcha-demo\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\captcha-demo\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\captcha-demo\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\captcha-demo\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\captcha-demo\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\captcha-demo\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\captcha-demo\\.venv\\pyvenv.cfg",
+        "G:\\repos\\captcha-demo\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\cellular_automaton\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\cellular_automaton\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\cellular_automaton\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\cellular_automaton\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\cellular_automaton\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\cellular_automaton\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\cellular_automaton\\.venv\\pyvenv.cfg",
+        "G:\\repos\\cellular_automaton\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\crawl-hub\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\crawl-hub\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\crawl-hub\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\crawl-hub\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\crawl-hub\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\crawl-hub\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\crawl-hub\\.venv\\pyvenv.cfg",
+        "G:\\repos\\crawl-hub\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\daily_player\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\daily_player\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\daily_player\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\daily_player\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\daily_player\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\daily_player\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\daily_player\\.venv\\pyvenv.cfg",
+        "G:\\repos\\daily_player\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\darksouls\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\darksouls\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\darksouls\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\darksouls\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\darksouls\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\darksouls\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\darksouls\\.venv\\pyvenv.cfg",
+        "G:\\repos\\darksouls\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\ddd2\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\ddd2\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\ddd2\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\ddd2\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\ddd2\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\ddd2\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\ddd2\\.venv\\pyvenv.cfg",
+        "G:\\repos\\ddd2\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\diablo\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\diablo\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\diablo\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\diablo\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\diablo\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\diablo\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\diablo\\.venv\\pyvenv.cfg",
+        "G:\\repos\\diablo\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\drawpic\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\drawpic\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\drawpic\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\drawpic\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\drawpic\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\drawpic\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\drawpic\\.venv\\pyvenv.cfg",
+        "G:\\repos\\drawpic\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\dungeon\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\dungeon\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\dungeon\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\dungeon\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\dungeon\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\dungeon\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\dungeon\\.venv\\pyvenv.cfg",
+        "G:\\repos\\dungeon\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\dwarf-scrolls\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\dwarf-scrolls\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\dwarf-scrolls\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\dwarf-scrolls\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\dwarf-scrolls\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\dwarf-scrolls\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\dwarf-scrolls\\.venv\\pyvenv.cfg",
+        "G:\\repos\\dwarf-scrolls\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\easy-ai\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\easy-ai\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\easy-ai\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\easy-ai\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\easy-ai\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\easy-ai\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\easy-ai\\.venv\\pyvenv.cfg",
+        "G:\\repos\\easy-ai\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\fish\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\fish\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\fish\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\fish\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\fish\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\fish\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\fish\\.venv\\pyvenv.cfg",
+        "G:\\repos\\fish\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\foolproof-operation\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\foolproof-operation\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\foolproof-operation\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\foolproof-operation\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\foolproof-operation\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\foolproof-operation\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\foolproof-operation\\.venv\\pyvenv.cfg",
+        "G:\\repos\\foolproof-operation\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\gan\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\gan\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\gan\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\gan\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\gan\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\gan\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\gan\\.venv\\pyvenv.cfg",
+        "G:\\repos\\gan\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\god-hand-\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\god-hand-\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\god-hand-\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\god-hand-\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\god-hand-\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\god-hand-\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\god-hand-\\.venv\\pyvenv.cfg",
+        "G:\\repos\\god-hand-\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\haha\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\haha\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\haha\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\haha\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\haha\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\haha\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\haha\\.venv\\pyvenv.cfg",
+        "G:\\repos\\haha\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\hell-below\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\hell-below\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\hell-below\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\hell-below\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\hell-below\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\hell-below\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\hell-below\\.venv\\pyvenv.cfg",
+        "G:\\repos\\hell-below\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\pyvenv.cfg",
+        "G:\\repos\\hell-below\\RuinedRealm_zh\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\Idle\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\Idle\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\Idle\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\Idle\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\Idle\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\Idle\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\Idle\\.venv\\pyvenv.cfg",
+        "G:\\repos\\Idle\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\image-scraper\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\image-scraper\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\image-scraper\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\image-scraper\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\image-scraper\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\image-scraper\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\image-scraper\\.venv\\pyvenv.cfg",
+        "G:\\repos\\image-scraper\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\imgproc\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\imgproc\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\imgproc\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\imgproc\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\imgproc\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\imgproc\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\imgproc\\.venv\\pyvenv.cfg",
+        "G:\\repos\\imgproc\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\jotunnslayer\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\jotunnslayer\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\jotunnslayer\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\jotunnslayer\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\jotunnslayer\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\jotunnslayer\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\jotunnslayer\\.venv\\pyvenv.cfg",
+        "G:\\repos\\jotunnslayer\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\kard\\venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\kard\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\kard\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\kard\\venv\\Lib\\site-packages",
+      "version": "3.13.12",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\repos\\kard\\venv\\Scripts\\python.exe",
+        "G:\\repos\\kard\\venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\kard\\venv\\pyvenv.cfg",
+        "G:\\repos\\kard\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\legend\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\legend\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\legend\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\legend\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\legend\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\legend\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\legend\\.venv\\pyvenv.cfg",
+        "G:\\repos\\legend\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\life-reset-simulator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\life-reset-simulator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\life-reset-simulator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\life-reset-simulator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\life-reset-simulator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\life-reset-simulator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\life-reset-simulator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\life-reset-simulator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\ling-train\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\ling-train\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\ling-train\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\ling-train\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\ling-train\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\ling-train\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\ling-train\\.venv\\pyvenv.cfg",
+        "G:\\repos\\ling-train\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\loly\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\loly\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\loly\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\loly\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\loly\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\loly\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\loly\\.venv\\pyvenv.cfg",
+        "G:\\repos\\loly\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\lonely-desert-road\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\lonely-desert-road\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\lonely-desert-road\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\lonely-desert-road\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\lonely-desert-road\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\lonely-desert-road\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\lonely-desert-road\\.venv\\pyvenv.cfg",
+        "G:\\repos\\lonely-desert-road\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\maga\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\maga\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\maga\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\maga\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\maga\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\maga\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\maga\\.venv\\pyvenv.cfg",
+        "G:\\repos\\maga\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\magic-tower\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\magic-tower\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\magic-tower\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\magic-tower\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\magic-tower\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\magic-tower\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\magic-tower\\.venv\\pyvenv.cfg",
+        "G:\\repos\\magic-tower\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\mahjong\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\mahjong\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\mahjong\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\mahjong\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\mahjong\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\mahjong\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\mahjong\\.venv\\pyvenv.cfg",
+        "G:\\repos\\mahjong\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\math\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\math\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\math\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\math\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\math\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\math\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\math\\.venv\\pyvenv.cfg",
+        "G:\\repos\\math\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\mc-clone\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\mc-clone\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\mc-clone\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\mc-clone\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\mc-clone\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\mc-clone\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\mc-clone\\.venv\\pyvenv.cfg",
+        "G:\\repos\\mc-clone\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\mc-clone\\MC2\\packaging\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\pyvenv.cfg",
+        "G:\\repos\\mc-clone\\MC2\\packaging\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\midi\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\midi\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\midi\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\midi\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\midi\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\midi\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\midi\\.venv\\pyvenv.cfg",
+        "G:\\repos\\midi\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\midi\\MusicStudio\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\midi\\MusicStudio\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\midi\\MusicStudio\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\midi\\MusicStudio\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\midi\\MusicStudio\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\midi\\MusicStudio\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\midi\\MusicStudio\\.venv\\pyvenv.cfg",
+        "G:\\repos\\midi\\MusicStudio\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\midi\\pro1\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\midi\\pro1\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\midi\\pro1\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\midi\\pro1\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\midi\\pro1\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\midi\\pro1\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\midi\\pro1\\.venv\\pyvenv.cfg",
+        "G:\\repos\\midi\\pro1\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\midjourney_video\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\midjourney_video\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\midjourney_video\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\midjourney_video\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\midjourney_video\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\midjourney_video\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\midjourney_video\\.venv\\pyvenv.cfg",
+        "G:\\repos\\midjourney_video\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\moba_battle_platform\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\moba_battle_platform\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\moba_battle_platform\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\moba_battle_platform\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\moba_battle_platform\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\moba_battle_platform\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\moba_battle_platform\\.venv\\pyvenv.cfg",
+        "G:\\repos\\moba_battle_platform\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\mp\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\mp\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\mp\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\mp\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\mp\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\mp\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\mp\\.venv\\pyvenv.cfg",
+        "G:\\repos\\mp\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\archived\\radio-python-2026-08-25\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror2\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\mirror\\musickit\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim2\\musickit\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\musickit-fix-20260817\\sim\\musickit\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\musickit\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\musickit\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\musickit\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\musickit\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\musickit\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\musickit\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\musickit\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\ncmturnmp3\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\ncmturnmp3\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\ncmturnmp3\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\ncmturnmp3\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\ncmturnmp3\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\ncmturnmp3\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\ncmturnmp3\\.venv\\pyvenv.cfg",
+        "G:\\repos\\ncmturnmp3\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\novel-down\\.deps\\venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\novel-down\\.deps\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\novel-down\\.deps\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\novel-down\\.deps\\venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\novel-down\\.deps\\venv\\Scripts\\python.exe",
+        "G:\\repos\\novel-down\\.deps\\venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\novel-down\\.deps\\venv\\pyvenv.cfg",
+        "G:\\repos\\novel-down\\.deps\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\novel-generator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\novel-generator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\novel-generator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\novel-generator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\novel-generator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\novel-generator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\novel-generator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\novel-generator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\novel\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\novel\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\novel\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\novel\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\novel\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\novel\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\novel\\.venv\\pyvenv.cfg",
+        "G:\\repos\\novel\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\ollama_generator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\ollama_generator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\ollama_generator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\ollama_generator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\ollama_generator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\ollama_generator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\ollama_generator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\ollama_generator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\particle\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\particle\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\particle\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\particle\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\particle\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\particle\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\particle\\.venv\\pyvenv.cfg",
+        "G:\\repos\\particle\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\particle\\.venv312",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\particle\\.venv312\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\particle\\.venv312\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\particle\\.venv312\\Lib\\site-packages",
+      "version": "3.12.13",
+      "base": "C:\\Users\\13122\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none",
+      "evidence": [
+        "G:\\repos\\particle\\.venv312\\Scripts\\python.exe",
+        "G:\\repos\\particle\\.venv312\\Scripts\\pythonw.exe",
+        "G:\\repos\\particle\\.venv312\\pyvenv.cfg",
+        "G:\\repos\\particle\\.venv312\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\pdf\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\pdf\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\pdf\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\pdf\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\pdf\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\pdf\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\pdf\\.venv\\pyvenv.cfg",
+        "G:\\repos\\pdf\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\photo\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\photo\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\photo\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\photo\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\photo\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\photo\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\photo\\.venv\\pyvenv.cfg",
+        "G:\\repos\\photo\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\photo\\tmp\\venv_photo",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\photo\\tmp\\venv_photo\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\photo\\tmp\\venv_photo\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\photo\\tmp\\venv_photo\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\repos\\photo\\tmp\\venv_photo\\Scripts\\python.exe",
+        "G:\\repos\\photo\\tmp\\venv_photo\\Scripts\\pythonw.exe",
+        "G:\\repos\\photo\\tmp\\venv_photo\\pyvenv.cfg",
+        "G:\\repos\\photo\\tmp\\venv_photo\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\photovideo\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\photovideo\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\photovideo\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\photovideo\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\photovideo\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\photovideo\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\photovideo\\.venv\\pyvenv.cfg",
+        "G:\\repos\\photovideo\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\player\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\player\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\player\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\player\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\player\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\player\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\player\\.venv\\pyvenv.cfg",
+        "G:\\repos\\player\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\print\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\print\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\print\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\print\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\print\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\print\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\print\\.venv\\pyvenv.cfg",
+        "G:\\repos\\print\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\pyvenv.cfg",
+        "G:\\repos\\print\\dictionary\\chinese-poetry\\chinese-poetry-master\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\procedural-video\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\procedural-video\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\procedural-video\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\procedural-video\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\procedural-video\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\procedural-video\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\procedural-video\\.venv\\pyvenv.cfg",
+        "G:\\repos\\procedural-video\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\procgen\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\procgen\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\procgen\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\procgen\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\procgen\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\procgen\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\procgen\\.venv\\pyvenv.cfg",
+        "G:\\repos\\procgen\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\project-root\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\project-root\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\project-root\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\project-root\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\project-root\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\project-root\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\project-root\\.venv\\pyvenv.cfg",
+        "G:\\repos\\project-root\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\py_test_runner\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\py_test_runner\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\py_test_runner\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\py_test_runner\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\py_test_runner\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\py_test_runner\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\py_test_runner\\.venv\\pyvenv.cfg",
+        "G:\\repos\\py_test_runner\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\pyinstaller\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\pyinstaller\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\pyinstaller\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\pyinstaller\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\pyinstaller\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\pyinstaller\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\pyinstaller\\.venv\\pyvenv.cfg",
+        "G:\\repos\\pyinstaller\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\pywallpaper\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\pywallpaper\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\pywallpaper\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\pywallpaper\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\pywallpaper\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\pywallpaper\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\pywallpaper\\.venv\\pyvenv.cfg",
+        "G:\\repos\\pywallpaper\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\remix\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\remix\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\remix\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\remix\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\remix\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\remix\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\remix\\.venv\\pyvenv.cfg",
+        "G:\\repos\\remix\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\renamer\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\renamer\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\renamer\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\renamer\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\renamer\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\renamer\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\renamer\\.venv\\pyvenv.cfg",
+        "G:\\repos\\renamer\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\repocheck\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\repocheck\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\repocheck\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\repocheck\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\repocheck\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\repocheck\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\repocheck\\.venv\\pyvenv.cfg",
+        "G:\\repos\\repocheck\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\RolePlayer\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\RolePlayer\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\RolePlayer\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\RolePlayer\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\RolePlayer\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\RolePlayer\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\RolePlayer\\.venv\\pyvenv.cfg",
+        "G:\\repos\\RolePlayer\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\running-group-simulator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\running-group-simulator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\running-group-simulator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\running-group-simulator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\running-group-simulator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\running-group-simulator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\running-group-simulator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\running-group-simulator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\russia\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\russia\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\russia\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\russia\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\russia\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\russia\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\russia\\.venv\\pyvenv.cfg",
+        "G:\\repos\\russia\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\sandbox\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\sandbox\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\sandbox\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\sandbox\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\sandbox\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\sandbox\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\sandbox\\.venv\\pyvenv.cfg",
+        "G:\\repos\\sandbox\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\sandbox\\procgen\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\sandbox\\procgen\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\sandbox\\procgen\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\sandbox\\procgen\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\sandbox\\procgen\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\sandbox\\procgen\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\sandbox\\procgen\\.venv\\pyvenv.cfg",
+        "G:\\repos\\sandbox\\procgen\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\sfx-download\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\sfx-download\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\sfx-download\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\sfx-download\\.venv\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\repos\\sfx-download\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\sfx-download\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\sfx-download\\.venv\\pyvenv.cfg",
+        "G:\\repos\\sfx-download\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\shikonghuaban\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\shikonghuaban\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\shikonghuaban\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\shikonghuaban\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\shikonghuaban\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\shikonghuaban\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\shikonghuaban\\.venv\\pyvenv.cfg",
+        "G:\\repos\\shikonghuaban\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\sign-in-simulator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\sign-in-simulator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\sign-in-simulator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\sign-in-simulator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\sign-in-simulator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\sign-in-simulator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\sign-in-simulator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\sign-in-simulator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\smile\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\smile\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\smile\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\smile\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\smile\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\smile\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\smile\\.venv\\pyvenv.cfg",
+        "G:\\repos\\smile\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\station\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\station\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\station\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\station\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\station\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\station\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\station\\.venv\\pyvenv.cfg",
+        "G:\\repos\\station\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\subtitle\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\subtitle\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\subtitle\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\subtitle\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\subtitle\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\subtitle\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\subtitle\\.venv\\pyvenv.cfg",
+        "G:\\repos\\subtitle\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\tavern-rogue\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\tavern-rogue\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\tavern-rogue\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\tavern-rogue\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\tavern-rogue\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\tavern-rogue\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\tavern-rogue\\.venv\\pyvenv.cfg",
+        "G:\\repos\\tavern-rogue\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\text-adventure\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\text-adventure\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\text-adventure\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\text-adventure\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\text-adventure\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\text-adventure\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\text-adventure\\.venv\\pyvenv.cfg",
+        "G:\\repos\\text-adventure\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\text-fps\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\text-fps\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\text-fps\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\text-fps\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\text-fps\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\text-fps\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\text-fps\\.venv\\pyvenv.cfg",
+        "G:\\repos\\text-fps\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\text-fps\\text_fps\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\text-fps\\text_fps\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\text-fps\\text_fps\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\text-fps\\text_fps\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\text-fps\\text_fps\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\text-fps\\text_fps\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\text-fps\\text_fps\\.venv\\pyvenv.cfg",
+        "G:\\repos\\text-fps\\text_fps\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\text-fps\\text_fps_zh\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\text-fps\\text_fps_zh\\.venv\\pyvenv.cfg",
+        "G:\\repos\\text-fps\\text_fps_zh\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\under-withered-limbs\\venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\under-withered-limbs\\venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\under-withered-limbs\\venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\under-withered-limbs\\venv\\Lib\\site-packages",
+      "version": "3.13.12",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\repos\\under-withered-limbs\\venv\\Scripts\\python.exe",
+        "G:\\repos\\under-withered-limbs\\venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\under-withered-limbs\\venv\\pyvenv.cfg",
+        "G:\\repos\\under-withered-limbs\\venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\video-generator\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\video-generator\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\video-generator\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\video-generator\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\video-generator\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\video-generator\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\video-generator\\.venv\\pyvenv.cfg",
+        "G:\\repos\\video-generator\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\video-generator\\sfx\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\video-generator\\sfx\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\video-generator\\sfx\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\video-generator\\sfx\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\video-generator\\sfx\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\video-generator\\sfx\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\video-generator\\sfx\\.venv\\pyvenv.cfg",
+        "G:\\repos\\video-generator\\sfx\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\wav_music_gen\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\wav_music_gen\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\wav_music_gen\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\wav_music_gen\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\wav_music_gen\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\wav_music_gen\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\wav_music_gen\\.venv\\pyvenv.cfg",
+        "G:\\repos\\wav_music_gen\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\wave4\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\wave4\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\wave4\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\wave4\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\wave4\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\wave4\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\wave4\\.venv\\pyvenv.cfg",
+        "G:\\repos\\wave4\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\webcopier\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\webcopier\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\webcopier\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\webcopier\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\webcopier\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\webcopier\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\webcopier\\.venv\\pyvenv.cfg",
+        "G:\\repos\\webcopier\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\weor\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\weor\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\weor\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\weor\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\weor\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\weor\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\weor\\.venv\\pyvenv.cfg",
+        "G:\\repos\\weor\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\yasuo\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\yasuo\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\yasuo\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\yasuo\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\yasuo\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\yasuo\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\yasuo\\.venv\\pyvenv.cfg",
+        "G:\\repos\\yasuo\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\yuanbao\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\yuanbao\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\yuanbao\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\yuanbao\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\yuanbao\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\yuanbao\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\yuanbao\\.venv\\pyvenv.cfg",
+        "G:\\repos\\yuanbao\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\repos\\zhuangtaiji\\.venv",
+      "kind": "venv",
+      "python_exe": "G:\\repos\\zhuangtaiji\\.venv\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\repos\\zhuangtaiji\\.venv\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\repos\\zhuangtaiji\\.venv\\Lib\\site-packages",
+      "version": "3.14.7",
+      "base": "F:\\Python314",
+      "evidence": [
+        "G:\\repos\\zhuangtaiji\\.venv\\Scripts\\python.exe",
+        "G:\\repos\\zhuangtaiji\\.venv\\Scripts\\pythonw.exe",
+        "G:\\repos\\zhuangtaiji\\.venv\\pyvenv.cfg",
+        "G:\\repos\\zhuangtaiji\\.venv\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\venvs\\probe",
+      "kind": "venv",
+      "python_exe": "G:\\venvs\\probe\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\venvs\\probe\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\venvs\\probe\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\venvs\\probe\\Scripts\\python.exe",
+        "G:\\venvs\\probe\\Scripts\\pythonw.exe",
+        "G:\\venvs\\probe\\pyvenv.cfg",
+        "G:\\venvs\\probe\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt",
+      "kind": "standalone",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\pythonw.exe",
+      "site_packages": null,
+      "version": null,
+      "base": null,
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\mingw64\\lib\\python3.9\\venv\\scripts\\nt\\pythonw.exe"
+      ],
+      "backend": "index",
+      "valid": false,
+      "detail": "疑似 CPython venv 模板资产（Lib/venv/scripts/nt|posix），非独立环境"
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default",
+      "kind": "venv",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Scripts\\pythonw.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\pyvenv.cfg",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp",
+      "kind": "venv",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Scripts\\pythonw.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\pyvenv.cfg",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\llamacpp\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild",
+      "kind": "venv",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Scripts\\pythonw.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\pyvenv.cfg",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\ncmbuild\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest",
+      "kind": "venv",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+      "site_packages": "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages",
+      "version": "3.13.14",
+      "base": "C:\\Users\\13122\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Scripts\\pythonw.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\pyvenv.cfg",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\envs\\relaytest\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    },
+    {
+      "root": "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12",
+      "kind": "standalone",
+      "python_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python.exe",
+      "pythonw_exe": "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\pythonw.exe",
+      "site_packages": "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib\\site-packages",
+      "version": null,
+      "base": null,
+      "evidence": [
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\pythonw.exe",
+        "G:\\workbuddy\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib\\site-packages"
+      ],
+      "backend": "index",
+      "valid": null,
+      "detail": ""
+    }
+  ],
+  "build": [
+    {
+      "volume": "C:",
+      "status": "ready",
+      "records": 1019263,
+      "path": "C:\\Users\\13122\\AppData\\Local\\foolproof-operation\\index\\C.db",
+      "detail": "重建：上次建库未完成（complete=0）",
+      "updated": "15:12:43",
+      "seconds": 12.8,
+      "rows_per_second": 79623.0
+    },
+    {
+      "volume": "D:",
+      "status": "ready",
+      "records": 57756,
+      "path": "C:\\Users\\13122\\AppData\\Local\\foolproof-operation\\index\\D.db",
+      "detail": "重建：上次建库未完成（complete=0）",
+      "updated": "15:12:44",
+      "seconds": 0.65,
+      "rows_per_second": 88588.0
+    },
+    {
+      "volume": "E:",
+      "status": "ready",
+      "records": 67837,
+      "path": "C:\\Users\\13122\\AppData\\Local\\foolproof-operation\\index\\E.db",
+      "detail": "重建：上次建库未完成（complete=0）",
+      "updated": "15:12:45",
+      "seconds": 0.84,
+      "rows_per_second": 80822.0
+    },
+    {
+      "volume": "F:",
+      "status": "ready",
+      "records": 1126708,
+      "path": "C:\\Users\\13122\\AppData\\Local\\foolproof-operation\\index\\F.db",
+      "detail": "重建：上次建库未完成（complete=0）",
+      "updated": "15:12:58",
+      "seconds": 13.17,
+      "rows_per_second": 85546.0
+    },
+    {
+      "volume": "G:",
+      "status": "ready",
+      "records": 2518977,
+      "path": "C:\\Users\\13122\\AppData\\Local\\foolproof-operation\\index\\G.db",
+      "detail": "重建：上次建库未完成（complete=0）",
+      "updated": "15:13:28",
+      "seconds": 29.96,
+      "rows_per_second": 84089.0
+    }
+  ]
+}
