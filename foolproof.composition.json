@@ -5,6 +5,10 @@
       "plugin": "core.events:bus_plugin"
     },
     {
+      "id": "tasklog",
+      "plugin": "core.tasklog:TaskLogService"
+    },
+    {
       "id": "categories",
       "plugin": "plugins.categories:CategoriesService"
     },
@@ -32,11 +36,7 @@
       "id": "search",
       "plugin": "plugins.search:SearchService",
       "config": {
-        "backend_order": [
-          "index",
-          "es",
-          "walk"
-        ]
+        "backend_order": ["index", "es", "walk"]
       }
     },
     {
@@ -45,6 +45,10 @@
       "config": {
         "limit_per_name": 2000
       }
+    },
+    {
+      "id": "audit",
+      "plugin": "core.audit:AuditService"
     }
   ]
 }

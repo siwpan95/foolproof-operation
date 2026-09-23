@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 本项目所有值得注意的变更都会记录在此文件中。
 
@@ -6,7 +6,60 @@
 
 ## [Unreleased]
 
+### Added
+
+- **环境发现（索引驱动）**：新增 `cli envs` —— 基于本机 NTFS **USN/MFT 元数据索引**发现 Python 环境，
+  覆盖目录名启发式看不见的深层 venv（如 `G:\notpython\kard_CN\venv`）。选项：`--build`（索引缺失时先建，
+  只读卷、不创建 USN journal）、`--deep`（逐个真跑解释器验证）、`--json`（导出）、`--volumes`、`--backend`。
+  实测本机 5 卷 479 万条记录建库 ≈50s，发现 **208 个环境候选**（187 venv / 20 standalone / 1 embed），
+  而原 `scan` 口径为 **4 个**；查询延迟 0.02~1.46ms。原理、实测与许可记账见 `docs/usn-indexer.md`。
+- **检索后端三级回退**：`index`（本仓索引）→ `es`（内置 Everything 命令行，MIT © voidtools）→
+  `walk`（目录遍历）依次回退，且每次检索都记录**每个后端的尝试与原因**（缺索引 / Everything 未运行 /
+  拒绝整盘遍历 / 命中条数），不静默降级。整盘遍历默认拒绝（`--allow-whole-drives` 显式许可），
+  另有 30s 墙钟预算兜底并标注「结果可能不全」。
+- **Cordis 式可逆插件内核（零第三方依赖）**：`core/` 提供 Context（服务注册表 + effect 逆序回收 +
+  `fork` 作用域 + 事务化清单装配），`foolproof.composition.json` 为插件清单，
+  `plugins/search.py`、`plugins/scanner.py` 为插件行；`core/runtime.py` 供 CLI/GUI 共用装配。
+  服务可见性与回收责任分离（服务冒泡到 realm 根、disposer 留在注册者），多实例私有服务用 `isolate`。
+- `cli scan --backend index|auto`：在保持原 glob 口径（默认 `walk`）之外，可选走插件化发现。
+- 测试：新增 `tests/`（stdlib `unittest`，214 例），覆盖内核语义、USN 解析、路径还原、索引库、
+  插件回退与溯源、清单装配；另含「批量名字查询必须命中索引」的 `EXPLAIN QUERY PLAN` 性能护栏。
+- 文档：新增 `docs/usn-indexer.md`（原理 / 实测 / 权限矩阵 / 性能基准 / 踩坑记录）
+  与实盘基准 JSON（`docs/usn-bench-*.json`、`docs/usn-store-bench-2026-09-23.json`、`docs/usn-envs-2026-09-23.json`）。
+- **插件化迁移（阶段 5）**：把四类逻辑迁入插件行 —— `plugins/categories.py`（分类清单 +
+  启动审计 fail-loud + 模糊匹配/规格拆分/pip 查询名）、`plugins/pip.py`（子进程调用 + 报错解读 +
+  健康检查 + 两种修复方式）、`plugins/reqtxt.py`（requirements.txt 解析 + 逐条安装编排）、
+  `plugins/installer.py`（安装/卸载/检查/升级编排，`inject = pip + categories`）。
+  清单扩至 **8 行**；`cli.py` 与 `requirements.py` 保留同名入口，内部委托插件。
+  **行为零变化有硬证据**：以 `git archive HEAD` 快照为基线，迁移前后 **52 项断言逐字一致**
+  （分类数与键、`target_of`/`split_spec`/`pip_query_name`/`is_local_spec`、
+  `find_category` 的 `SystemExit` 措辞、`_resolve_packages` 各分支、`cmd_list` 全量与单分类输出、
+  requirements.txt 解析、`stderr_tail`/`failure_hint` 映射）。
+  - 唯一**有意硬化**：`cli check` 在 `pip show` 超时/异常时按「未安装」处理（原实现在该路径会抛栈）。
+  - GUI 的流程编排（线程 / 日志 / 音效 / 进度）保持原样，仅叶子逻辑改为委托插件。
+- **任务日志与启动审计（阶段 6，B 类模板标配）**：`core/tasklog.py`（JSONL 操作流水，
+  默认落用户级目录、可用 `FOOLPROOF_TASKLOG` 覆盖、写失败不影响主流程）+ `cli tasks`
+  （事件计数 / 失败计数 / 最近记录 / `--json` / `--clear`）；`core/audit.py` +
+  `cli doctor`（一次核完插件清单、分类清单、索引状态、检索后端、日志可写性，只读，
+  有 error 时退出码 1）。清单扩至 **10 行**（新增 `tasklog` / `audit`）。
+  `install`/`uninstall`/`check` 在**不改变任何 stdout** 的前提下静默记录事件。
+
 ### Changed
+
+- README / README.en 去本地化：绝对路径改为 `<PATH>` 占位符，首屏补仓库链接与 MIT 许可声明；
+  两版逐节对齐（章节 / 要点数 / 占位符数量一致），分类与库数统一为「24 分类 / 761 个库」。
+
+### Fixed
+
+- **GBK 控制台下 `cli` 因 emoji 直接崩**（既有缺陷，打包冒烟时暴露）：分类名含 emoji，
+  在默认代码页 936 的控制台打印时抛 `UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f3ae'`，
+  **源码版与冻结版都会中招**。现于 CLI 入口放宽 stdout/stderr 错误策略（`errors="replace"`）：
+  中文正常、emoji 退化为 `?`，命令不再崩；要完整显示可 `set PYTHONIOENCODING=utf-8`（README 已注明）。
+- 便携版打包 spec（`requirements.spec`）：原写死绝对路径且**漏收运行期资源与新模块** ——
+  现改用 `SPECPATH` 推导，`datas` 补 `foolproof.composition.json`、`LICENSE`、
+  `tools/everything/`（ES 后端要用），`hiddenimports` 显式列出插件清单里按字符串动态导入的模块
+  （`core.events`/`core.tasklog`/`core.audit`/`core.runtime`/`index.service`/`plugins.*`）——
+  这类遗漏只在冻结版运行时才暴露，已实测修复（重建 exe 后 `cli list`/`doctor`/`envs` 全部 exit 0）。
 
 - 自研包随源仓库改名：`alloy` → `allin-engine`。an-engine 于 2026-09-19 把包名与模块名由 `alloy` 改为 `allin_engine`（PyPI 项目名 `allin-engine`）。本清单同步：「🏠 本地 / 自研包」条目由 `"alloy"` 改为 `"allin-engine"`（值仍为 `-e G:/repos/an-engine`）；「🛠️ 工具链」里同名的公开包 `alloy` 条目移除 —— 它本就是 PyPI 上的同名不同项目（Elide 的 High-performance runtime）。
 - **value 现支持 pip 选项前缀**（`shlex.split()`）：可写 `"-e G:/repos/an-engine"` 实现 editable 安装。两个自研包已切换到 `-e` 模式（都在活跃开发中，editable 更顺手）。已实测 `pip install --dry-run -e G:/repos/an-engine` → `Would install alloy-1.0.0`。
