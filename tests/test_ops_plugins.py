@@ -156,7 +156,8 @@ class AuditServiceTest(unittest.TestCase):
         log = TaskLog(os.path.join(self.tmpdir, "t.jsonl"))
         service, _ = self._service(tasklog=log)
         items = service.run()
-        self.assertEqual(len(items), 5)
+        # 6 项：插件清单 / 目标解释器 / 分类清单 / 索引状态 / 检索后端 / 任务日志
+        self.assertEqual(len(items), 6)
         self.assertTrue(all(item.ok for item in items), [i.as_dict() for i in items])
         self.assertFalse(service.failed(items))
 

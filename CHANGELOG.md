@@ -81,6 +81,15 @@
 
 ### Fixed
 
+- **冻结版把「本程序自身」当 Python 解释器**（便携版实测事故，用户报「pip 检查全部失败：pip 未安装或不可用」）：
+  PyInstaller 冻结版里 `sys.executable` 指向 `requirements.exe` **自身**，而 GUI/CLI 都拿它执行
+  `[PYTHON_EXE, "-m", "pip", …]` → **每个 pip 操作都重新拉起本程序**（argv 不匹配 `cli` / `--python`
+  分支时还开 GUI 且永不退出）——实测一次 `cli check` 连锁 **22 个进程**，pip 健康检查因 15s 超时永久失败。
+  修复：新增 `core/interpreter.py` 解析真实解释器（`--python` → `FOOLPROOF_PYTHON` → 当前解释器
+  → `PATH` 上的 `python`/`py`），`PipService.run_full` 加**自指防护**（首元素是本程序自身或空即拒绝、
+  不 spawn），并把 `health`/`outdated`/`show`/`version` 里剩余的裸 `subprocess` 调用**全部改走防护路径**
+  （此前它们绕过了防护），`cli doctor` 新增「目标解释器」审计项，GUI 在无解释器时如实显示
+  「未找到 Python 解释器」而非「pip 未安装」；README 两版说明便携版不自带 Python。
 - **GBK 控制台下 `cli` 因 emoji 直接崩**（既有缺陷，打包冒烟时暴露）：分类名含 emoji，
   在默认代码页 936 的控制台打印时抛 `UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f3ae'`，
   **源码版与冻结版都会中招**。现于 CLI 入口放宽 stdout/stderr 错误策略（`errors="replace"`）：

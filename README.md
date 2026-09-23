@@ -42,6 +42,11 @@ python requirements.py cli list   # 命令行
 python -m foolproof_operation     # 与上面等价的统一入口
 ```
 
+**便携版（release 附件里的 `requirements.exe`）不自带 Python**：程序需要机器上有一个真实解释器来执行
+`pip`。解析顺序为 `--python <python.exe>` → 环境变量 `FOOLPROOF_PYTHON` → `PATH` 上的 `python`/`py`；
+都找不到时会明确提示「未找到 Python 解释器」（**不会**把本程序自身当解释器）。可用
+`requirements.exe cli doctor` 查看当前解析到的解释器。
+
 ## 快速开始
 
 ```bash

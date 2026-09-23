@@ -12,13 +12,17 @@ import urllib.parse
 from pathlib import Path
 
 # ========= 目标 Python 解释器 =========
-# 默认使用运行本工具的 Python；可用命令行参数覆盖，例如：
-#   python requirements.py --python F:\Python314\python.exe
-PYTHON_EXE = sys.executable
-if len(sys.argv) >= 3 and sys.argv[1] in ("--python", "-p"):
-    _candidate = os.path.abspath(sys.argv[2])
-    if Path(_candidate).exists():
-        PYTHON_EXE = _candidate
+# 优先级：--python/-p 参数 → FOOLPROOF_PYTHON → 当前解释器（源码运行）→ PATH 上的 python / py 启动器。
+#
+# ⚠ 冻结版（PyInstaller）里 sys.executable 是**本程序自身**，绝不能拿它当 Python 用：
+# 否则每次 pip 操作都会重新拉起本程序（argv 不匹配时还开 GUI 且永不退出，
+# 实测连锁 22 个进程并把 pip 检查挂死）。解析逻辑见 core/interpreter.py。
+from .core.interpreter import resolve_python_exe  # noqa: E402
+
+PYTHON_EXE, PYTHON_EXE_SOURCE = resolve_python_exe(argv=sys.argv[1:])
+PYTHON_EXE_ERROR = None if PYTHON_EXE else PYTHON_EXE_SOURCE
+if PYTHON_EXE is None:
+    PYTHON_EXE = ""   # 由界面显式提示（服务层也会拒绝自指/空解释器）
 
 # ========= 依赖库定义（从 JSON 加载，可按需增删） =========
 def load_categories():
@@ -89,10 +93,22 @@ class InstallerApp(tk.Tk):
 
         self._build_ui()
         self.protocol("WM_DELETE_WINDOW", self._on_close)
-        # 显示目标解释器，避免装错环境
-        self.after(100, lambda: self.log_write(f"🐍 目标 Python：{PYTHON_EXE}\n\n（可用 python requirements.py --python <路径> 指定其它解释器）\n"))
-        # 启动后自动检查 pip 状态
+        # 显示目标解释器（避免装错环境）；随后自动检查 pip 状态
+        self.after(100, self._log_interpreter)
         self.after(300, lambda: threading.Thread(target=self._check_pip, daemon=True).start())
+
+    def _log_interpreter(self):
+        """启动时如实显示目标解释器与来源；未解析到时给出可执行的下一步（不静默）。"""
+        if PYTHON_EXE:
+            self.log_write(
+                f"🐍 目标 Python：{PYTHON_EXE}\n"
+                f"   （来源：{PYTHON_EXE_SOURCE}；可用 --python <路径> 指定其它解释器）\n"
+            )
+        else:
+            self.log_write(
+                f"❌ 未找到可用的 Python 解释器：{PYTHON_EXE_ERROR}\n"
+                f"   启动时加 --python <python.exe>，或设置环境变量 FOOLPROOF_PYTHON 后重开。\n"
+            )
 
     def _build_ui(self):
         # ===== pip 状态栏 =====
@@ -858,6 +874,12 @@ class InstallerApp(tk.Tk):
     # ========= pip 健康检查 =========
     def _check_pip(self):
         """pip 状态检查（判定逻辑见 plugins/pip.py 的 PipService.health）。"""
+        if not PYTHON_EXE:
+            # 冻结版找不到真实 Python：如实说明「未找到解释器」，不要误报成「pip 未安装」
+            self._set_pip_status(
+                "missing", "未找到 Python 解释器", PYTHON_EXE_ERROR or "请用 --python <python.exe> 指定"
+            )
+            return
         health = self._pip_health()
         if health["state"] == "missing":
             self._set_pip_status("missing", health["main"], health["detail"])

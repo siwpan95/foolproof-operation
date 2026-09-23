@@ -213,11 +213,12 @@ class PipTest(unittest.TestCase):
         self.assertIn("25.1", state["detail"])
 
     def test_outdated_records_failure_reason(self):
+        """`outdated()` 经 run_full（受自指防护）；mock 缝也随之改到 run_full。"""
         service = PipService(None, {})
-        with mock.patch("subprocess.check_output", side_effect=OSError("nope")):
+        with mock.patch.object(service, "run_full", return_value=(-1, "", "nope")):
             self.assertEqual(service.outdated(), {})
         self.assertIsNotNone(service.last_outdated_error)
-        with mock.patch("subprocess.check_output", return_value='[{"name": "Pip"}]'):
+        with mock.patch.object(service, "run_full", return_value=(0, '[{"name": "Pip"}]', "")):
             self.assertEqual(list(service.outdated()), ["pip"])
         self.assertIsNone(service.last_outdated_error)
 

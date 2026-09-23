@@ -184,16 +184,30 @@ def cmd_list(args) -> int:
     return 0
 
 
+def target_python(explicit: str | None = None) -> str:
+    """解析目标 Python 解释器（**冻结版不能拿本程序自身当 Python**）。
+
+    优先级与自指防护见 ``core/interpreter.py``；解析不到即 fail-loud——
+    否则冻结版会把 `requirements.exe -m pip …` 当成 pip 调用，连锁拉起本程序自身（实测 22 个进程）。
+    """
+    from .core.interpreter import resolve_python_exe
+
+    path, source = resolve_python_exe(explicit=explicit, argv=sys.argv[1:])
+    if path is None:
+        raise SystemExit("未找到可用的 Python 解释器：{0}".format(source))
+    return path
+
+
 def cmd_install(args) -> int:
     pkgs = _resolve_packages(args.packages, args.category, args.file, args.all)
     # 值可能是本地路径或带选项（-e ...），拆成 pip 参数
     targets = [a for p in pkgs for a in split_spec(target_of(p))]
     print(f"将安装 {len(pkgs)} 个库：{', '.join(targets[:8])}{'…' if len(targets) > 8 else ''}")
     cmd = ["install", "-U"] if args.upgrade else ["install"]
+    py = target_python(args.python)
     log = _tasklog()
-    log.record("install.start", count=len(pkgs), upgrade=bool(args.upgrade),
-               python=args.python or sys.executable)
-    rc = _pip(cmd + targets, args.python)
+    log.record("install.start", count=len(pkgs), upgrade=bool(args.upgrade), python=py)
+    rc = _pip(cmd + targets, py)
     log.record("install.done", count=len(pkgs), rc=rc, ok=(rc == 0))
     return rc
 
@@ -202,9 +216,10 @@ def cmd_uninstall(args) -> int:
     pkgs = _resolve_packages(args.packages, args.category, None, False)
     names = [pip_query_name(p, target_of(p)) for p in pkgs]
     print(f"将卸载 {len(names)} 个库：{', '.join(names)}")
+    py = target_python(args.python)
     log = _tasklog()
-    log.record("uninstall.start", count=len(names), python=args.python or sys.executable)
-    rc = _pip(["uninstall", "-y", *names], args.python)
+    log.record("uninstall.start", count=len(names), python=py)
+    rc = _pip(["uninstall", "-y", *names], py)
     log.record("uninstall.done", count=len(names), rc=rc, ok=(rc == 0))
     return rc
 
@@ -216,7 +231,7 @@ def cmd_check(args) -> int:
     from .plugins.installer import InstallerService
 
     pkgs = _resolve_packages(args.packages, args.category, None, False) or _all_packages()
-    py = args.python or sys.executable
+    py = target_python(args.python)
     ctx = Context()
     pip_service = ctx.provide("pip", PipService(None, {"python_exe": py}))
     ctx.provide("categories", CategoriesService(None, {"path": str(HERE / "requirements_categories.json")}))

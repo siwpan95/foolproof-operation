@@ -166,11 +166,29 @@ class AuditService(Service):
         """执行全部检查（只读；唯一写入是任务日志的一条 `audit.probe`）。"""
         return [
             self._check_manifest(),
+            self._check_interpreter(),
             self._check_categories(),
             self._check_index(),
             self._check_backends(),
             self._check_tasklog(),
         ]
+
+    def _check_interpreter(self) -> AuditItem:
+        """目标解释器：冻结版最容易在这里踩自指陷阱（拿本程序自身当 Python）。"""
+        from .interpreter import is_self_executable, resolve_python_exe
+
+        path, source = resolve_python_exe()
+        if path is None:
+            return AuditItem(
+                LEVEL_ERROR, "目标解释器", source,
+                "用 --python <python.exe> 指定，或设置环境变量 FOOLPROOF_PYTHON",
+            )
+        if is_self_executable(path):
+            return AuditItem(
+                LEVEL_ERROR, "目标解释器", "解析结果是本程序自身：{0}".format(path),
+                "冻结版必须用 --python 指定真实解释器",
+            )
+        return AuditItem(LEVEL_OK, "目标解释器", "{0}（来源：{1}）".format(path, source))
 
     def failed(self, items: Optional[List[AuditItem]] = None) -> bool:
         return any(item.level == LEVEL_ERROR for item in (items if items is not None else self.run()))

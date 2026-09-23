@@ -76,11 +76,29 @@ class PipService(Service):
     def run_full(
         self, cmd: Sequence[str], *, timeout: Optional[int] = None
     ) -> Tuple[int, str, str]:
-        """执行命令，返回 ``(returncode, stdout, stderr)``。**绝不抛异常**。"""
+        """执行命令，返回 ``(returncode, stdout, stderr)``。**绝不抛异常**。
+
+        **自指防护**：若命令的首元素是本程序自身（冻结版把 ``sys.executable`` 当 Python 的经典陷阱），
+        直接拒绝而不是 spawn —— 否则会重新拉起本程序（argv 不匹配时还会开 GUI 且永不退出，
+        实测连锁 22 个进程并把 pip 检查挂死）。
+        """
+        from ..core.interpreter import is_self_executable
+
+        argv = [str(x) for x in cmd]
+        if not argv or not argv[0]:
+            return -1, "", (
+                "未解析到目标 Python 解释器：请用 --python <python.exe> 指定，"
+                "或设置环境变量 FOOLPROOF_PYTHON。"
+            )
+        if is_self_executable(argv[0]):
+            return -1, "", (
+                "拒绝执行：目标解释器是本程序自身（{0}）。冻结版请用 --python <python.exe> 指定真实解释器，"
+                "或设置环境变量 FOOLPROOF_PYTHON。".format(argv[0])
+            )
         limit = self.timeout if timeout is None else int(timeout)
         try:
             r = subprocess.run(
-                list(cmd),
+                argv,
                 capture_output=True,
                 text=True,
                 timeout=limit,
@@ -134,17 +152,18 @@ class PipService(Service):
 
         失败时返回空字典，并把原因记在 ``last_outdated_error``（调用方据此区分
         「没有可更新项」与「这次查询失败」，原始 CLI 就是按后者打印提示的）。
+        **走 ``run_full`` 而非裸 subprocess**：否则绕过自指防护（冻结版会把本程序当 Python 拉起）。
         """
         py = python_exe or self.python_exe
         self.last_outdated_error = None
+        rc, raw, err = self.run_full(
+            [py, "-m", "pip", "list", "--outdated", "--format=json"], timeout=timeout
+        )
+        if rc != 0:
+            self.last_outdated_error = (err or "").strip() or "rc={0}".format(rc)
+            return {}
         try:
-            raw = subprocess.check_output(
-                [py, "-m", "pip", "list", "--outdated", "--format=json"],
-                text=True,
-                errors="replace",
-                timeout=timeout,
-            )
-            return {row["name"].lower(): row for row in json.loads(raw)}
+            return {row["name"].lower(): row for row in json.loads(raw or "[]")}
         except Exception as exc:
             self.last_outdated_error = str(exc)
             return {}
@@ -157,21 +176,13 @@ class PipService(Service):
         合并成 ``None`` 会把两种日志混为一谈（迁移 GUI 流程时发现的行为差异）。
         """
         py = python_exe or self.python_exe
-        try:
-            proc = subprocess.run(
-                [py, "-m", "pip", "show", pkg],
-                capture_output=True,
-                text=True,
-                timeout=30,
-                encoding="utf-8",
-                errors="replace",
-            )
-        except Exception as exc:
-            return {"state": "error", "version": None, "detail": str(exc)}
-        if proc.returncode != 0:
-            return {"state": "missing", "version": None, "detail": (proc.stderr or "").strip()}
+        rc, out, err = self.run_full([py, "-m", "pip", "show", pkg], timeout=30)
+        if rc == -1:
+            return {"state": "error", "version": None, "detail": (err or "").strip()}
+        if rc != 0:
+            return {"state": "missing", "version": None, "detail": (err or "").strip()}
         version = "?"
-        for line in (proc.stdout or "").splitlines():
+        for line in (out or "").splitlines():
             if line.startswith("Version:"):
                 version = line.split(":", 1)[1].strip()
                 break
@@ -214,36 +225,24 @@ class PipService(Service):
             "version": None,
             "latest": None,
         }
-        try:
-            r = subprocess.run(
-                [py, "-m", "pip", "--version"],
-                capture_output=True,
-                text=True,
-                timeout=15,
-                encoding="utf-8",
-                errors="replace",
-            )
-            if r.returncode != 0:
-                result.update(state="missing", main="pip 未安装", detail="命令行找不到 pip 模块")
-                return result
-            version_output = r.stdout.strip()
-            # 格式: pip 24.0 from C:\... (python 3.13)
-            result["version"] = version_output.split()[1] if len(version_output.split()) > 1 else "?"
-        except Exception as e:
-            result.update(state="missing", main="pip 检查失败", detail=str(e))
+        rc, out, err = self.run_full([py, "-m", "pip", "--version"], timeout=15)
+        if rc == -1:
+            # 含「自指拒绝」「解释器未解析」「超时」等硬错误：如实上报，不要含糊成「pip 未安装」
+            result.update(state="missing", main="pip 检查失败", detail=(err or "").strip())
             return result
+        if rc != 0:
+            result.update(state="missing", main="pip 未安装", detail="命令行找不到 pip 模块")
+            return result
+        version_output = (out or "").strip()
+        # 格式: pip 24.0 from C:\... (python 3.13)
+        result["version"] = version_output.split()[1] if len(version_output.split()) > 1 else "?"
 
-        try:
-            r = subprocess.run(
-                [py, "-m", "pip", "list", "--outdated", "--format=json"],
-                capture_output=True,
-                text=True,
-                timeout=30,
-                encoding="utf-8",
-                errors="replace",
-            )
-            if r.returncode == 0:
-                for item in json.loads(r.stdout):
+        rc2, raw, _err2 = self.run_full(
+            [py, "-m", "pip", "list", "--outdated", "--format=json"], timeout=30
+        )
+        if rc2 == 0:
+            try:
+                for item in json.loads(raw or "[]"):
                     if item["name"].lower() == "pip":
                         result["latest"] = item["latest_version"]
                         result["version"] = item.get("version", result["version"])
@@ -253,8 +252,8 @@ class PipService(Service):
                             detail="当前 {0}  →  最新 {1}".format(result["version"], result["latest"]),
                         )
                         return result
-        except Exception:
-            pass
+            except Exception:
+                pass
 
         result["detail"] = "版本 {0}，已是最新".format(result["version"])
         return result

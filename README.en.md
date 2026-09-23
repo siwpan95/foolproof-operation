@@ -46,6 +46,12 @@ python requirements.py cli list   # CLI
 python -m foolproof_operation     # equivalent unified entry point
 ```
 
+**The portable build (`requirements.exe` in the release assets) does not bundle Python**: it needs a real
+interpreter on the machine to run `pip`. Resolution order: `--python <python.exe>` → `FOOLPROOF_PYTHON`
+env var → `python`/`py` on `PATH`; if none is found it says "no Python interpreter found" instead of
+mistaking **its own executable** for an interpreter. Run `requirements.exe cli doctor` to see which
+interpreter is being used.
+
 ## Quick start
 
 ```bash
