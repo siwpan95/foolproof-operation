@@ -24,6 +24,9 @@ A tkinter GUI tool for managing **761 Python packages across 24 functional categ
 - **Task log and startup audit** — install / uninstall / check / index-build / discovery runs are appended
   to a JSONL history (`cli tasks`), and `cli doctor` checks the plugin manifest, category manifest, index
   state, search backends and log writability in one read-only pass
+- **GUI panels** — "📋 Task log" (filter by event / failures only / clear) and "🐍 Environment discovery"
+  (candidate list with the answering backend, index state, one-click index build / incremental sync; all
+  work runs in background threads so the window stays responsive)
 
 ## Quick start
 

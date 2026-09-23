@@ -33,6 +33,14 @@ CATEGORIES = load_categories()
 _PIP_SERVICE = None
 
 
+def _safe_call(fn, *args, **kwargs):
+    """后台线程里调用服务方法：吞掉异常（面板/流程不应因单次失败把线程炸掉）。"""
+    try:
+        return fn(*args, **kwargs)
+    except Exception:
+        return None
+
+
 def _pip_service():
     global _PIP_SERVICE
     if _PIP_SERVICE is None:
@@ -166,6 +174,9 @@ class InstallerApp(tk.Tk):
         ttk.Button(btn_frame, text="一键更新", command=self.start_upgrade).pack(side="left", padx=5)
         ttk.Button(btn_frame, text="🔍 扫盘", command=self.start_scan).pack(side="left", padx=5)
         ttk.Button(btn_frame, text="📄 读取 requirements.txt", command=self._scan_requirements_txt).pack(side="left", padx=5)
+        # 阶段 C 面板：独立窗口（不动现有布局）
+        ttk.Button(btn_frame, text="📋 任务日志", command=self._open_tasklog_panel).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text="🐍 环境发现", command=self._open_env_panel).pack(side="left", padx=5)
 
         # 音效开关
         ttk.Checkbutton(btn_frame, text="🔊 音效", variable=self.sound_enabled).pack(side="left", padx=10)
@@ -1078,6 +1089,158 @@ class InstallerApp(tk.Tk):
                 runtime.dispose()
             except Exception:
                 pass
+
+
+    # ========= 面板（阶段 C：任务日志 / 环境发现）=========
+    def _background(self, fn, *args, **kwargs):
+        """把一次调用丢到后台线程（面板的建库/同步/发现用，避免卡住界面）。"""
+        thread = threading.Thread(target=lambda: _safe_call(fn, *args, **kwargs), daemon=True)
+        thread.start()
+        return thread
+
+    def _tasklog_model(self):
+        from .panels import TaskLogModel
+
+        runtime = self._runtime()
+        service = runtime.ctx.get("tasklog", None) if runtime is not None else None
+        if service is None:
+            from .core.tasklog import TaskLogService
+
+            service = TaskLogService(None, {})
+        return TaskLogModel(service)
+
+    def _env_model(self):
+        from .panels import EnvPanelModel
+
+        runtime = self._runtime()
+        scanner = runtime.ctx.get("scanner", None) if runtime is not None else None
+        index = runtime.ctx.get("fileindex", None) if runtime is not None else None
+        return EnvPanelModel(scanner, index, worker=self._background)
+
+    def _open_tasklog_panel(self):
+        """📋 任务日志面板：查看 / 按事件过滤 / 只看失败 / 刷新 / 清空。"""
+        model = self._tasklog_model()
+        win = tk.Toplevel(self)
+        win.title("📋 任务日志")
+        win.geometry("860x480")
+        header = ttk.Label(win, anchor="w", padding=(8, 6))
+        header.pack(fill="x")
+        bar = ttk.Frame(win, padding=(8, 0))
+        bar.pack(fill="x")
+        event_var = tk.StringVar(value="")
+        fail_var = tk.BooleanVar(value=False)
+        ttk.Label(bar, text="事件过滤:").pack(side="left")
+        entry = ttk.Entry(bar, textvariable=event_var, width=18)
+        entry.pack(side="left", padx=4)
+        ttk.Checkbutton(bar, text="只看失败", variable=fail_var).pack(side="left", padx=6)
+        body = scrolledtext.ScrolledText(win, wrap="none", height=20)
+        body.pack(fill="both", expand=True, padx=8, pady=6)
+
+        def refresh(*_ignored):
+            rows = model.rows(event_filter=event_var.get(), only_failures=fail_var.get())
+            header.config(text="{0}　（显示 {1} 条）".format(model.header(), len(rows)))
+            body.delete("1.0", "end")
+            for row in rows:
+                flag = " ⚠" if row.failed else ""
+                body.insert("end", "{0}  {1}{2}  {3}\n".format(row.ts, row.event, flag, row.detail))
+
+        def clear():
+            if messagebox.askyesno("确认", "清空任务日志？（历史记录将被删除）"):
+                model.clear()
+                refresh()
+
+        ttk.Button(bar, text="刷新", command=refresh).pack(side="right", padx=3)
+        ttk.Button(bar, text="清空", command=clear).pack(side="right", padx=3)
+        entry.bind("<KeyRelease>", refresh)
+        fail_var.trace_add("write", lambda *_: refresh())
+        refresh()
+
+    def _open_env_panel(self):
+        """🐍 环境发现面板：候选列表（标注来源后端）+ 索引状态 + 一键建库/增量同步。"""
+        model = self._env_model()
+        win = tk.Toplevel(self)
+        win.title("🐍 环境发现")
+        win.geometry("940x560")
+        header = ttk.Label(win, anchor="w", justify="left", wraplength=900, padding=(8, 6))
+        header.pack(fill="x")
+        bar = ttk.Frame(win, padding=(8, 0))
+        bar.pack(fill="x")
+        backend_var = tk.StringVar(value="auto")
+        deep_var = tk.BooleanVar(value=False)
+        volume_var = tk.StringVar(value="")
+        ttk.Label(bar, text="后端:").pack(side="left")
+        ttk.Combobox(
+            bar, textvariable=backend_var, width=8, state="readonly",
+            values=["auto", "index", "es", "walk", "legacy"],
+        ).pack(side="left", padx=4)
+        ttk.Checkbutton(bar, text="深验证", variable=deep_var).pack(side="left", padx=6)
+        ttk.Label(bar, text="卷:").pack(side="left", padx=(10, 0))
+        volume_box = ttk.Combobox(bar, textvariable=volume_var, width=6, state="readonly")
+        volume_box.pack(side="left", padx=4)
+        columns = ("kind", "root", "version", "python")
+        tree = ttk.Treeview(win, columns=columns, show="headings", height=16)
+        for key, text, width in (
+            ("kind", "类型", 90), ("root", "路径", 430), ("version", "版本", 90), ("python", "解释器", 320),
+        ):
+            tree.heading(key, text=text)
+            tree.column(key, width=width, anchor="w")
+        tree.pack(fill="both", expand=True, padx=8, pady=6)
+        status = ttk.Label(win, anchor="w", padding=(8, 2))
+        status.pack(fill="x")
+
+        def sync_volume_list():
+            volumes = [volume for volume, _state, _detail in model.index_status()]
+            volume_box["values"] = volumes or ["C:", "D:", "E:", "F:", "G:"]
+            if not volume_var.get() and volumes:
+                volume_var.set(volumes[0])
+
+        def render(rows, detail):
+            tree.delete(*tree.get_children())
+            for row in rows:
+                mark = "" if row.valid is None else ("✓" if row.valid else "✗")
+                tree.insert("", "end", values=(row.kind + mark, row.root, row.version, row.python_exe))
+            header.config(text="{0}　命中 {1} 个候选\n{2}".format(model.index_summary(), len(rows), detail))
+            status.config(text=model.index_summary())
+            sync_volume_list()
+
+        def discover():
+            header.config(text="正在发现环境…（后台）")
+            backend = backend_var.get()
+            deep = bool(deep_var.get())
+
+            def job():
+                try:
+                    rows = model.discover(backend=backend, deep=deep)
+                    detail = model.discover_header(backend=backend)
+                except Exception as exc:  # 面板里不抛栈，改为提示
+                    rows, detail = [], "发现失败：{0}".format(exc)
+                self.after(0, lambda: render(rows, detail))
+
+            threading.Thread(target=job, daemon=True).start()
+
+        def build(force=False):
+            volume = volume_var.get()
+            if not volume:
+                messagebox.showinfo("提示", "先选一个卷（或点「开始发现」刷新卷列表）")
+                return
+            status.config(text="正在建库 {0}（后台，可继续操作界面）…".format(volume))
+            model.build(volume, force=force, async_run=True)
+            self.after(1500, sync_volume_list)
+
+        def sync():
+            volume = volume_var.get()
+            if not volume:
+                messagebox.showinfo("提示", "先选一个卷")
+                return
+            status.config(text="正在增量同步 {0}（后台）…".format(volume))
+            model.sync(volume, async_run=True)
+            self.after(1500, sync_volume_list)
+
+        ttk.Button(bar, text="开始发现", command=discover).pack(side="right", padx=3)
+        ttk.Button(bar, text="建索引", command=lambda: build(False)).pack(side="right", padx=3)
+        ttk.Button(bar, text="增量同步", command=sync).pack(side="right", padx=3)
+        render([], "点「开始发现」按当前后端列出候选环境")
+        sync_volume_list()
 
 
 # ========= 启动 =========
