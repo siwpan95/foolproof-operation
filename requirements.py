@@ -22,11 +22,24 @@ if len(sys.argv) >= 3 and sys.argv[1] in ("--python", "-p"):
 
 # ========= 依赖库定义（从 JSON 加载，可按需增删） =========
 def load_categories():
-    json_path = Path(__file__).parent / "requirements_categories.json"
-    with open(json_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    """读取分类清单（实现见 plugins/categories.py：结构校验 fail-loud）。"""
+    from plugins.categories import load_categories as _load
+
+    return _load(str(Path(__file__).parent / "requirements_categories.json"))
 
 CATEGORIES = load_categories()
+
+#: pip 服务（懒建；实现见 plugins/pip.py）—— GUI 的 _pip_run 走它，行为与迁移前一致
+_PIP_SERVICE = None
+
+
+def _pip_service():
+    global _PIP_SERVICE
+    if _PIP_SERVICE is None:
+        from plugins.pip import PipService
+
+        _PIP_SERVICE = PipService(None, {"python_exe": PYTHON_EXE})
+    return _PIP_SERVICE
 
 # 自动发现时跳过的名字：标准库模块 / 常见误判
 _STDLIB_OR_BOGUS_NAMES = {
@@ -184,23 +197,16 @@ class InstallerApp(tk.Tk):
 
     # ========= pip 子进程封装 =========
     def _pip_run(self, cmd, timeout=900):
-        """执行 pip 命令，返回 (returncode, stderr)。绝不抛异常。"""
-        try:
-            r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout,
-                                encoding="utf-8", errors="replace")
-            return r.returncode, r.stderr
-        except subprocess.TimeoutExpired:
-            return -1, f"命令超时（>{timeout} 秒）"
-        except Exception as e:
-            return -1, str(e)
+        """执行 pip 命令，返回 (returncode, stderr)。绝不抛异常。
+
+        实现已迁移到 ``plugins/pip.py``（PipService.run）；本方法保留为 GUI 的稳定入口。
+        """
+        return _pip_service().run(cmd, timeout=timeout)
 
     @staticmethod
     def _stderr_tail(err, lines=6):
-        err = (err or "").strip()
-        if not err:
-            return ""
-        tail = err.splitlines()[-lines:]
-        return "\n".join(f"    {t}" for t in tail)
+        from plugins.pip import stderr_tail
+        return stderr_tail(err, lines)
 
     def _report_failure(self, name, action, pkg, stderr):
         """失败时把 pip 的真实报错尾部写入 GUI 日志和 失败日志.txt。"""
@@ -217,19 +223,8 @@ class InstallerApp(tk.Tk):
 
     @staticmethod
     def _failure_hint(stderr):
-        err = (stderr or "").lower()
-        if "no matching distribution" in err:
-            return ("PyPI 上没有与当前 Python 版本匹配的发行包。常见原因：包名拼写错误、"
-                    "包已改名、或该版本号不支持当前 Python；可尝试去掉版本号改用最新版。")
-        if "could not find a version that satisfies" in err:
-            return "版本号不满足要求（可能太旧或不存在），建议去掉版本号重试。"
-        if "metadata-generation-failed" in err or "building wheel" in err:
-            return "该包需要本地编译且失败（通常需要 Visual Studio C++ 构建工具），可寻找预编译 wheel。"
-        if "timed out" in err or "timeout" in err:
-            return "网络超时，可更换 pip 镜像源（如清华源）后重试。"
-        if "ssl" in err or "certificate" in err:
-            return "网络证书/SSL 问题，可检查系统时间或更换镜像源。"
-        return ""
+        from plugins.pip import failure_hint
+        return failure_hint(stderr)
 
     # ========= 音效 =========
     def _play_sound(self, sound_type):
@@ -436,6 +431,44 @@ class InstallerApp(tk.Tk):
         self._play_sound("start")
         threading.Thread(target=self._scan_disk, daemon=True).start()
 
+    # 逐个环境跑 pip list 代价高（每个 1~3 秒），故对插件化发现出的候选设上限：
+    # 上限只影响「本次逐个查包」的范围，不影响发现能力（完整清单见 `cli envs`）。
+    SCAN_MAX_ENVS = 40
+
+    def _discover_python_dirs(self):
+        """环境发现：**优先插件化（USN 索引驱动），失败/无结果显式回退原目录启发式**。
+
+        返回 ``(目录列表, 来源说明)``。插件化一条链是
+        ``foolproof.composition.json``（fileindex → search → scanner）；
+        索引未建、Everything 未跑、依赖缺失等任何情况都回退，绝不静默少报环境。
+        """
+        try:
+            from core.runtime import build_runtime
+
+            with build_runtime(strict=False) as runtime:
+                scanner = runtime.ctx.get("scanner", None)
+                if scanner is not None:
+                    environments = scanner.discover(backend="auto")
+                    result = scanner.last_result
+                    if environments:
+                        order = {"venv": 0, "conda": 1, "embed": 2, "standalone": 3, "legacy": 4}
+                        environments.sort(
+                            key=lambda env: (order.get(env.kind, 9), str(env.root).lower())
+                        )
+                        total = len(environments)
+                        selected = environments[: self.SCAN_MAX_ENVS]
+                        backend = result.backend if result is not None else "?"
+                        note = f"插件化发现（backend={backend}，候选 {total} 个）"
+                        if total > len(selected):
+                            note += (
+                                f"，本次逐个查包前 {len(selected)} 个"
+                                f"（完整清单：python requirements.py cli envs）"
+                            )
+                        return [Path(env.root) for env in selected], note
+        except Exception as exc:  # 插件化不可用不该让「扫盘」这个功能面消失
+            self.log_write(f"⚠️ 插件化发现不可用，回退目录启发式：{exc}\n")
+        return self._find_python_installations(), "目录启发式（原口径）"
+
     def _find_python_installations(self):
         """扫描系统中的 Python 安装位置"""
         found = set()
@@ -543,7 +576,8 @@ class InstallerApp(tk.Tk):
     def _scan_disk(self):
         self.log_write("🔍 正在扫描系统中的 Python 安装...\n")
 
-        python_dirs = self._find_python_installations()
+        python_dirs, source = self._discover_python_dirs()
+        self.log_write(f"   发现来源：{source}\n")
 
         if not python_dirs:
             self.log_write("❌ 未找到任何 Python 安装。")
@@ -714,50 +748,12 @@ class InstallerApp(tk.Tk):
     # ========= requirements.txt 扫描与安装 =========
     @staticmethod
     def _parse_requirements_txt(filepath: str) -> list:
-        """
-        解析 requirements.txt 文件，返回 [(包名, 传给 pip 的安装规格), ...]
-        跳过注释、空行、-r 引用、--index-url 等非包行，
-        以及 "pip install xxx" 这类误粘贴的命令行。
-        """
-        import re
-        packages = []
-        text = None
-        for enc in ("utf-8-sig", "utf-8", "gbk"):
-            try:
-                with open(filepath, "r", encoding=enc) as f:
-                    text = f.read()
-                break
-            except UnicodeDecodeError:
-                continue
-            except OSError:
-                return packages
-        if text is None:
-            try:
-                with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                    text = f.read()
-            except OSError:
-                return packages
+        """解析 requirements.txt → [(包名, 传给 pip 的安装规格), ...]。
 
-        for line in text.splitlines():
-            line = line.strip()
-            # 跳过空行和注释
-            if not line or line.startswith("#"):
-                continue
-            # 跳过选项行（-r / -e / --index-url / --extra-index-url 等）
-            if line.startswith("-"):
-                continue
-            # 跳过误粘贴的 shell 命令
-            if re.match(r"^(pip|pip3|python|py)(\.exe)?\s+(-m\s+pip\s+)?install\s+", line, re.I):
-                continue
-            # 去掉行内注释（# 前必须有空白，避免误伤 URL 中的 #sha256=...）
-            req = re.split(r"\s+#", line, maxsplit=1)[0].strip()
-            if not req:
-                continue
-            # 匹配包名部分（字母数字._-），后跟可选的 [extras]
-            match = re.match(r'^([a-zA-Z0-9._-]+(?:\[[a-zA-Z0-9._,-]+\])?)', req)
-            if match:
-                packages.append((match.group(1), req))
-        return packages
+        实现已迁移到 ``plugins/reqtxt.py``（解析规则逐字一致）；本方法保留为 GUI 的稳定入口。
+        """
+        from plugins.reqtxt import parse_requirements_txt
+        return parse_requirements_txt(filepath)
 
     def _scan_requirements_txt(self):
         """扫描目录下的 requirements.txt 并显示结果"""

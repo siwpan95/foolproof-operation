@@ -1,0 +1,50 @@
+{
+  "plugins": [
+    {
+      "id": "bus",
+      "plugin": "core.events:bus_plugin"
+    },
+    {
+      "id": "categories",
+      "plugin": "plugins.categories:CategoriesService"
+    },
+    {
+      "id": "pip",
+      "plugin": "plugins.pip:PipService"
+    },
+    {
+      "id": "installer",
+      "plugin": "plugins.installer:InstallerService"
+    },
+    {
+      "id": "reqtxt",
+      "plugin": "plugins.reqtxt:ReqTxtService"
+    },
+    {
+      "id": "fileindex",
+      "plugin": "index.service:IndexService",
+      "config": {
+        "auto_build": false,
+        "deadline_seconds": 300
+      }
+    },
+    {
+      "id": "search",
+      "plugin": "plugins.search:SearchService",
+      "config": {
+        "backend_order": [
+          "index",
+          "es",
+          "walk"
+        ]
+      }
+    },
+    {
+      "id": "scanner",
+      "plugin": "plugins.scanner:ScannerService",
+      "config": {
+        "limit_per_name": 2000
+      }
+    }
+  ]
+}
