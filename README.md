@@ -24,6 +24,24 @@
 - **GUI 面板** — 「📋 任务日志」（按事件过滤 / 只看失败 / 清空）与「🐍 环境发现」
   （候选环境列表 + 来源后端 + 索引状态 + 一键建库 / 增量同步，均走后台线程不卡界面）
 
+## 安装
+
+```bash
+# 从 PyPI 安装（Windows；Python >= 3.8，运行时零第三方依赖）
+pip install foolproof-operation
+
+foolproof-operation              # 图形界面
+foolproof-operation cli list     # 命令行（子命令同下节）
+```
+
+源码方式（无需安装）也照旧可用：
+
+```bash
+python requirements.py            # 图形界面
+python requirements.py cli list   # 命令行
+python -m foolproof_operation     # 与上面等价的统一入口
+```
+
 ## 快速开始
 
 ```bash

@@ -28,6 +28,24 @@ A tkinter GUI tool for managing **761 Python packages across 24 functional categ
   (candidate list with the answering backend, index state, one-click index build / incremental sync; all
   work runs in background threads so the window stays responsive)
 
+## Install
+
+```bash
+# from PyPI (Windows; Python >= 3.8, zero third-party runtime dependencies)
+pip install foolproof-operation
+
+foolproof-operation              # GUI
+foolproof-operation cli list     # CLI (same subcommands as the next section)
+```
+
+Running straight from a source checkout still works, no install required:
+
+```bash
+python requirements.py            # GUI
+python requirements.py cli list   # CLI
+python -m foolproof_operation     # equivalent unified entry point
+```
+
 ## Quick start
 
 ```bash
