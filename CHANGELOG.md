@@ -8,6 +8,13 @@
 
 ### Added
 
+- **（阶段 D）发布打包配置**：新增 `pyproject.toml`（名称 `foolproof-operation`、MIT、`requires-python>=3.8`、
+  **运行时零依赖**、console script `foolproof-operation = foolproof_operation.__main__:main`）与 `MANIFEST.in`。
+  防膨胀口径参照 `G:\repos\an-engine` 的教训：**关闭 `include-package-data` 自动收录**（pyproject 模式下默认 True，
+  会把包内所有已跟踪文件打进 wheel），改用显式 `package-data` 白名单（分类清单 / 插件清单 / 内置 es.exe 及其 LICENSE）；
+  sdist 清单排除运行期产物（失败日志、重试日志、`*.bak-*`、基准 JSON）。
+  实测：wheel 238 KB / 解包 595 KB，条目仅包与 5 个白名单数据文件 + dist-info（**零日志/基准/测试/文档**）；
+  干净 venv 安装后控制台脚本与 `python -m foolproof_operation` 均 exit 0，包内资源在位。
 - **（阶段 C）GUI 两个面板**：工具栏新增「📋 任务日志」与「🐍 环境发现」入口，均为**独立窗口**（不动既有主界面布局）。
   - 📋 任务日志：读 JSONL 流水 → 按事件名过滤（输入即筛）/ 只看失败 / 刷新 / 清空；顶部显示条数·首末时间·失败计数，失败行标 ⚠。
   - 🐍 环境发现：按后端（auto/index/es/walk/legacy）列出候选环境（类型/路径/版本/解释器，含 ✓✗ 深验证标记），

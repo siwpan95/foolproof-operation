@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foolproof-operation"
+version = "1.1.0"
+description = "Python 依赖库安装器（tkinter GUI + CLI）：分类管理、批量安装/卸载/更新、pip 健康检查，以及基于 NTFS USN/MFT 索引的全盘环境发现"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "siwpan" }]
+keywords = [
+    "python", "pip", "package-manager", "tkinter", "gui",
+    "environment-discovery", "usn", "mft", "ntfs", "everything",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+#: 纯标准库 + tkinter，运行时零第三方依赖（README 的既有承诺）
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1.0", "twine>=4.0"]
+
+[project.urls]
+Homepage = "https://gitee.com/siwpan/foolproof-operation"
+Repository = "https://gitee.com/siwpan/foolproof-operation"
+Changelog = "https://gitee.com/siwpan/foolproof-operation/blob/master/CHANGELOG.md"
+
+[project.scripts]
+# 统一入口：`foolproof-operation`（无参开 GUI）/ `foolproof-operation cli <子命令>`
+foolproof-operation = "foolproof_operation.__main__:main"
+
+[tool.setuptools]
+# ⚠ 关键：pyproject 模式下 include-package-data 默认为 True，会把包目录下**所有已被 git 跟踪的文件**
+# 塞进 wheel（本仓包内有 es.exe / 清单 / 工具 README，且仓库根还有日志与基准 JSON）。
+# 参照 G:\repos\an-engine 的教训（字体曾让 wheel 从 ~40KB 涨到 27MB）：关掉自动收录 + 显式白名单。
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["foolproof_operation*"]
+
+[tool.setuptools.package-data]
+foolproof_operation = [
+    "requirements_categories.json",
+    "foolproof.composition.json",
+    "tools/everything/es.exe",
+    "tools/everything/LICENSE",
+    "tools/everything/README.md",
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.pyc", "__pycache__/*", "*.bak*", "*.log"]

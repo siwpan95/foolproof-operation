@@ -1,0 +1,31 @@
+# sdist 清单（wheel 内容由 pyproject.toml 的 package-data 白名单控制）
+#
+# 原则：源码包只装「构建与运行需要的东西 + 文档」，**不带运行期产物**
+# （失败日志.txt / 重试安装日志.txt / *.bak-* / 基准 JSON / __pycache__ / build / dist）。
+
+include LICENSE
+include README.md
+include README.en.md
+include CHANGELOG.md
+include pyproject.toml
+include requirements.txt
+include requirements.spec
+include requirements-dbg.spec
+
+recursive-include foolproof_operation *.py *.json *.md *.exe
+recursive-include docs *.md
+recursive-include tests *.py
+
+# 运行期产物与本地杂物：一律不进 sdist
+exclude 失败日志.txt
+exclude 重试安装日志.txt
+exclude 失败日志分析报告.md
+exclude mirror_retry_list.json
+exclude retry_candidates.json
+exclude retry_final_list.json
+exclude retry_install_list.json
+global-exclude *.py[cod] *.bak *.bak-* __pycache__/*
+prune build
+prune dist
+prune .venv
+prune .gitee
