@@ -55,9 +55,12 @@ class CheckResult:
     installed: Optional[str] = None
     latest: Optional[str] = None
     outdated_known: bool = True
+    error: Optional[str] = None        # 查询异常（与「未安装」严格区分）
 
     @property
     def status(self) -> str:
+        if self.error:
+            return "error"            # 查询异常
         if self.installed is None:
             return "missing"          # 未安装
         if self.latest and self.latest != self.installed:
@@ -127,21 +130,32 @@ class InstallerService(Service):
 
     def check(self, names: Sequence[str]) -> List[CheckResult]:
         """版本检查：先取一次 outdated 表，再逐库 pip show。"""
+        return self.check_pairs([(name, self._target(name)) for name in names])
+
+    def check_pairs(self, pairs: Sequence[Tuple[str, str]]) -> List[CheckResult]:
+        """版本检查（显式 ``(显示名, 安装目标)`` 对）。
+
+        GUI 的复选框持有的是「显示名 → value」对，直接传进来可避免再查一次清单，
+        从而与界面里当前加载的清单严格一致（迁移 GUI 流程时引入）。
+        """
         outdated = self.pip.outdated(self.python_exe)
         outcome: List[CheckResult] = []
-        for name in names:
-            query = self._query_name(name)
-            version = self.pip.installed_version(query, python_exe=self.python_exe)
-            if version is None:
+        for name, target in pairs:
+            query = self._query_name(name, target)
+            info = self.pip.show(query, python_exe=self.python_exe)
+            if info["state"] == "error":
                 outcome.append(
-                    CheckResult(name=name, installed=None, outdated_known=bool(outdated))
+                    CheckResult(name=name, outdated_known=bool(outdated), error=info["detail"])
                 )
+                continue
+            if info["state"] == "missing":
+                outcome.append(CheckResult(name=name, outdated_known=bool(outdated)))
                 continue
             row = outdated.get(query.lower())
             outcome.append(
                 CheckResult(
                     name=name,
-                    installed=version,
+                    installed=info["version"],
                     latest=(row or {}).get("latest_version"),
                     outdated_known=bool(outdated),
                 )

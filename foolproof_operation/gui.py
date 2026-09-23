@@ -74,7 +74,13 @@ class InstallerApp(tk.Tk):
         self.pip_version = "?"
         self.pip_latest = "?"
 
+        # 插件运行时（懒建；安装/卸载/检查/更新等流程经服务执行，见 flows.py）
+        self._runtime_obj = None
+        self._runtime_failed = False
+        self._runtime_disposed = False
+
         self._build_ui()
+        self.protocol("WM_DELETE_WINDOW", self._on_close)
         # 显示目标解释器，避免装错环境
         self.after(100, lambda: self.log_write(f"🐍 目标 Python：{PYTHON_EXE}\n\n（可用 python requirements.py --python <路径> 指定其它解释器）\n"))
         # 启动后自动检查 pip 状态
@@ -209,17 +215,13 @@ class InstallerApp(tk.Tk):
         return stderr_tail(err, lines)
 
     def _report_failure(self, name, action, pkg, stderr):
-        """失败时把 pip 的真实报错尾部写入 GUI 日志和 失败日志.txt。"""
-        tail = self._stderr_tail(stderr)
-        msg = f"❌ {name} {action}失败"
-        if tail:
-            msg += f"：\n{tail}"
-        self.log_write(msg + "\n")
-        self._fail_log(msg)
-        hint = self._failure_hint(stderr)
-        if hint:
-            self.log_write(f"💡 {hint}\n")
-        self._play_sound("fail")
+        """失败时把 pip 的真实报错尾部写入 GUI 日志和 失败日志.txt。
+
+        实现已抽到 ``flows.report_failure``（文本与迁移前逐字一致），本方法保留为界面入口。
+        """
+        from .flows import report_failure
+
+        return report_failure(self._sink(), name, action, pkg, stderr)
 
     @staticmethod
     def _failure_hint(stderr):
@@ -266,22 +268,10 @@ class InstallerApp(tk.Tk):
         threading.Thread(target=self.install, args=(selected,), daemon=True).start()
 
     def install(self, packages):
-        self.log_write("🚀 开始安装依赖库...\n")
-        from .cli import split_spec   # 共享：支持 "-e <路径>" 形式的 value
+        """安装流程（编排见 flows.run_install；本方法只做适配）。"""
+        from .flows import run_install
 
-        for name, pkg in packages:
-            self.log_write(f"📦 安装 {name}")
-            rc, err = self._pip_run(
-                [PYTHON_EXE, "-m", "pip", "install", "-U", *split_spec(pkg)]
-            )
-            if rc == 0:
-                self.log_write(f"✅ {name} 安装成功\n")
-                self._play_sound("ok")
-            else:
-                self._report_failure(name, "安装", pkg, err)
-
-        self.log_write("🎉 安装完成！")
-        self._play_sound("done")
+        run_install(self._installer(), packages, self._sink())
 
     # ========= 检查版本 =========
     def start_check(self):
@@ -294,58 +284,10 @@ class InstallerApp(tk.Tk):
         threading.Thread(target=self._check_versions, args=(selected,), daemon=True).start()
 
     def _check_versions(self, packages):
-        self.log_write("🔍 正在检查版本...\n")
+        """版本检查（编排见 flows.run_check）。"""
+        from .flows import run_check
 
-        # 一次性获取所有可更新的包（避免逐个查询太慢）
-        outdated_map = {}
-        try:
-            result = subprocess.run(
-                [PYTHON_EXE, "-m", "pip", "list", "--outdated", "--format=json"],
-                capture_output=True, text=True, timeout=60,
-                encoding="utf-8", errors="replace",
-            )
-            if result.returncode == 0:
-                for item in json.loads(result.stdout):
-                    outdated_map[item["name"].lower()] = {
-                        "current": item.get("version", "?"),
-                        "latest": item["latest_version"],
-                    }
-        except Exception:
-            pass
-
-        from .cli import pip_query_name   # 共享：本地路径型 value 的包名解析
-        for name, pkg in packages:
-            try:
-                # 去掉 extras（如 fastapi[all] -> fastapi）；本地路径型 value 回退显示名
-                pkg_base = pip_query_name(name, pkg)
-                result = subprocess.run(
-                    [PYTHON_EXE, "-m", "pip", "show", pkg_base],
-                    capture_output=True, text=True, timeout=30,
-                    encoding="utf-8", errors="replace",
-                )
-                if result.returncode != 0:
-                    self.log_write(f"⚠️  {name}: 未安装")
-                    continue
-
-                version = "?"
-                for line in result.stdout.splitlines():
-                    if line.startswith("Version:"):
-                        version = line.split(":", 1)[1].strip()
-                        break
-
-                key = pkg_base.lower()
-                if key in outdated_map:
-                    self.log_write(
-                        f"📦 {name}: {version}  →  {outdated_map[key]['latest']} (可更新)"
-                    )
-                else:
-                    self.log_write(f"📦 {name}: {version} (已是最新)")
-            except Exception as e:
-                self.log_write(f"❌ {name} 检查失败：{e}")
-                self._fail_log(f"❌ {name} 检查失败：{e}")
-
-        self.log_write("\n✅ 版本检查完成！")
-        self._play_sound("done")
+        run_check(self._installer(), packages, self._sink())
 
     # ========= 一键更新 =========
     def start_upgrade(self):
@@ -367,26 +309,10 @@ class InstallerApp(tk.Tk):
         threading.Thread(target=self._upgrade_versions, args=(selected,), daemon=True).start()
 
     def _upgrade_versions(self, packages):
-        self.log_write("⬆️ 开始更新依赖库...\n")
+        """一键更新（编排见 flows.run_upgrade；pip 自身放最后）。"""
+        from .flows import run_upgrade
 
-        # pip 自身放最后更新
-        sorted_pkgs = sorted(packages, key=lambda x: ("pip" in x[0].lower(), x[0]))
-
-        from .cli import split_spec   # 共享：支持 "-e <路径>" 形式的 value
-        for name, pkg in sorted_pkgs:
-            self.log_write(f"⬆️ 更新 {name}")
-            cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", *split_spec(pkg)]
-            if pkg.lower() == "pip":
-                cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", "pip"]
-            rc, err = self._pip_run(cmd)
-            if rc == 0:
-                self.log_write(f"✅ {name} 更新成功\n")
-                self._play_sound("ok")
-            else:
-                self._report_failure(name, "更新", pkg, err)
-
-        self.log_write("🎉 更新完成！")
-        self._play_sound("done")
+        run_upgrade(self._installer(), packages, self._sink())
 
     # ========= 卸载 =========
     def start_uninstall(self):
@@ -408,23 +334,10 @@ class InstallerApp(tk.Tk):
         threading.Thread(target=self._uninstall, args=(selected,), daemon=True).start()
 
     def _uninstall(self, packages):
-        self.log_write("🗑️ 开始卸载依赖库...\n")
+        """卸载流程（编排见 flows.run_uninstall）。"""
+        from .flows import run_uninstall
 
-        from .cli import pip_query_name   # 共享：本地路径型 value 的包名解析
-        for name, pkg in packages:
-            self.log_write(f"🗑️ 卸载 {name}")
-            pkg_base = pip_query_name(name, pkg)
-            rc, err = self._pip_run(
-                [PYTHON_EXE, "-m", "pip", "uninstall", "-y", pkg_base]
-            )
-            if rc == 0:
-                self.log_write(f"✅ {name} 卸载成功\n")
-                self._play_sound("ok")
-            else:
-                self._report_failure(name, "卸载", pkg, err)
-
-        self.log_write("🎉 卸载完成！")
-        self._play_sound("done")
+        run_uninstall(self._installer(), packages, self._sink())
 
     # ========= 扫盘 =========
     def start_scan(self):
@@ -926,74 +839,24 @@ class InstallerApp(tk.Tk):
         dialog.protocol("WM_DELETE_WINDOW", _close_dialog)
 
     def _install_from_requirements(self, packages: list, source_path: str):
-        """安装从 requirements.txt 解析的包"""
-        self.log_write(f"\n🚀 从 requirements.txt 安装 {len(packages)} 个依赖包…\n")
-        self.log_write(f"   源文件: {source_path}\n")
+        """按 requirements.txt 安装（编排见 flows.run_requirements）。"""
+        from .flows import run_requirements
 
-        success_count = 0
-        fail_count = 0
-
-        for pkg_name, raw_line in packages:
-            self.log_write(f"📦 安装 {pkg_name} ({raw_line})")
-            rc, err = self._pip_run(
-                [PYTHON_EXE, "-m", "pip", "install", raw_line]
-            )
-            if rc == 0:
-                self.log_write(f"✅ {pkg_name} 安装成功\n")
-                self._play_sound("ok")
-                success_count += 1
-            else:
-                self._report_failure(pkg_name, "安装", raw_line, err)
-                fail_count += 1
-
-        self.log_write(f"\n{'='*50}")
-        self.log_write(f"📊 安装完成！成功 {success_count} 个，失败 {fail_count} 个")
-        self._play_sound("done")
+        run_requirements(self._installer(), packages, source_path, self._sink())
 
     # ========= pip 健康检查 =========
     def _check_pip(self):
-        """启动时自动检查 pip 是否可用、版本、是否需要更新"""
-        # 1. 检查 pip 是否可用
-        try:
-            r = subprocess.run(
-                [PYTHON_EXE, "-m", "pip", "--version"],
-                capture_output=True, text=True, timeout=15,
-                encoding="utf-8", errors="replace",
-            )
-            if r.returncode != 0:
-                self._set_pip_status("missing", "pip 未安装", "命令行找不到 pip 模块")
-                return
-            version_output = r.stdout.strip()
-            # 格式: pip 24.0 from C:\... (python 3.13)
-            current_ver = version_output.split()[1]
-            self.pip_version = current_ver
-        except Exception as e:
-            self._set_pip_status("missing", "pip 检查失败", str(e))
+        """pip 状态检查（判定逻辑见 plugins/pip.py 的 PipService.health）。"""
+        health = self._pip_health()
+        if health["state"] == "missing":
+            self._set_pip_status("missing", health["main"], health["detail"])
             return
-
-        # 2. 检查是否有更新
-        try:
-            r = subprocess.run(
-                [PYTHON_EXE, "-m", "pip", "list", "--outdated", "--format=json"],
-                capture_output=True, text=True, timeout=30,
-                encoding="utf-8", errors="replace",
-            )
-            if r.returncode == 0:
-                for item in json.loads(r.stdout):
-                    if item["name"].lower() == "pip":
-                        self.pip_latest = item["latest_version"]
-                        self.pip_version = item.get("version", self.pip_version)
-                        self._set_pip_status(
-                            "outdated",
-                            f"pip 可更新",
-                            f"当前 {self.pip_version}  →  最新 {self.pip_latest}",
-                        )
-                        return
-        except Exception:
-            pass
-
-        # 3. 一切正常
-        self._set_pip_status("ok", "pip 运行正常", f"版本 {self.pip_version}，已是最新")
+        self.pip_version = health["version"] or "?"
+        if health["state"] == "outdated":
+            self.pip_latest = health["latest"]
+            self._set_pip_status("outdated", "pip 可更新", health["detail"])
+            return
+        self._set_pip_status("ok", "pip 运行正常", health["detail"])
 
     def _set_pip_status(self, status, main_text, detail_text):
         """更新 pip 状态栏显示（必须在主线程调用）"""
@@ -1124,12 +987,8 @@ class InstallerApp(tk.Tk):
         threading.Thread(target=self._do_repair, args=(method,), daemon=True).start()
 
     def _do_repair(self, method):
-        if method == "upgrade":
-            cmd = [PYTHON_EXE, "-m", "pip", "install", "--upgrade", "pip"]
-        else:
-            cmd = [PYTHON_EXE, "-m", "ensurepip", "--upgrade"]
-
-        rc, err = self._pip_run(cmd, timeout=180)
+        """pip 修复（命令构造见 plugins/pip.py 的 PipService.repair）。"""
+        rc, err = _pip_service().repair(method, python_exe=PYTHON_EXE)
         if rc == 0:
             self.log_write("✅ pip 修复成功！\n")
             self._play_sound("done")
@@ -1139,6 +998,86 @@ class InstallerApp(tk.Tk):
 
         # 修完后重新检查
         self._check_pip()
+
+    # ========= 服务与流程适配（阶段 B）=========
+    def _sink(self):
+        """流程输出槽：日志/音效/失败落账。
+
+        ``log_newline=""``：``log_write`` 自带换行，流程里的字符串已按迁移前的写法带好换行，
+        这样日志文本与迁移前**逐字一致**。
+        """
+        from .flows import Sink
+
+        return Sink(
+            log=self.log_write, sound=self._play_sound, fail_log=self._fail_log, log_newline=""
+        )
+
+    def _runtime(self):
+        """懒建插件运行时（包内 10 行清单，容错装配）；失败只记日志、不抛到界面。"""
+        if self._runtime_obj is None and not self._runtime_failed:
+            try:
+                from .core.runtime import build_runtime
+
+                runtime = build_runtime(
+                    {
+                        "pip": {"python_exe": PYTHON_EXE},
+                        "installer": {"python_exe": PYTHON_EXE},
+                        "fileindex": {"auto_build": False},
+                    },
+                    strict=False,
+                )
+                for row_id, reason in (getattr(runtime.loader, "failed", None) or {}).items():
+                    self.log_write(f"⚠️ 插件行 {row_id} 未装配：{reason}\n")
+                self._runtime_obj = runtime
+            except Exception as exc:
+                self._runtime_failed = True
+                self.log_write(f"⚠️ 插件运行时装配失败，本会话回退为独立服务实例：{exc}\n")
+        return self._runtime_obj
+
+    def _installer(self):
+        """取安装器服务；运行时不可用时退化为**独立服务实例**（仍然走服务层，不再内联 pip 命令）。"""
+        runtime = self._runtime()
+        if runtime is not None:
+            installer = runtime.ctx.get("installer", None)
+            if installer is not None:
+                return installer
+        if getattr(self, "_standalone_installer", None) is None:
+            from .core.context import Context
+            from .plugins.categories import CategoriesService
+            from .plugins.installer import InstallerService
+            from .plugins.pip import PipService
+
+            ctx = Context()
+            ctx.provide("pip", PipService(None, {"python_exe": PYTHON_EXE}))
+            ctx.provide("categories", CategoriesService(None, {}))
+            ctx.install(InstallerService, {"python_exe": PYTHON_EXE})
+            self._standalone_installer = ctx.get("installer")
+        return self._standalone_installer
+
+    def _pip_health(self):
+        """pip 状态（服务实现；运行时不可用时用模块级 pip 服务）。"""
+        runtime = self._runtime()
+        service = runtime.ctx.get("pip", None) if runtime is not None else None
+        if service is None:
+            service = _pip_service()
+        return service.health(PYTHON_EXE)
+
+    def _on_close(self):
+        """关窗：回收插件运行时（后台线程、索引库句柄按内核语义逆序回收）。"""
+        self._dispose_runtime()
+        self.destroy()
+
+    def _dispose_runtime(self):
+        if self._runtime_disposed:
+            return
+        self._runtime_disposed = True
+        runtime = self._runtime_obj
+        self._runtime_obj = None
+        if runtime is not None:
+            try:
+                runtime.dispose()
+            except Exception:
+                pass
 
 
 # ========= 启动 =========

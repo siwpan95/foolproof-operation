@@ -46,6 +46,15 @@
 
 ### Changed
 
+- **（阶段 B）GUI 五条流程迁出界面层**：安装 / 一键更新 / 卸载 / 版本检查 / requirements.txt 安装
+  原本内联在 `gui.py`（各自拼 pip 命令 + 写日志 + 播声音），现抽到界面无关的
+  `foolproof_operation/flows.py`（只依赖 `installer`/`pip` 服务与一个 `Sink` 输出槽），
+  GUI 方法变成薄适配器；`_check_pip` / `_do_repair` 也改为调用 `PipService.health()` / `repair()`。
+  配套：`PipService.show()` 严格区分「未安装 / 查询异常」（此前合并成 `None` 会让两类日志混淆）、
+  `InstallerService.check_pairs()` 支持 GUI 的「显示名 → value」对；GUI 关窗时回收插件运行时。
+  **行为零变化**：以阶段 A 提交快照为基准，用同一探针驱动真实 GUI 流程方法（打桩 pip 低层，
+  含成功与失败分支），前后日志/音效/失败日志序列 **57 行逐字一致**；新增 `tests/test_flows.py`
+  以逐条断言锁住日志文本与音效序列。
 - **（结构层）代码收进 `foolproof_operation` 包**，为 PyPI 发布铺路：平铺的 `core/` `index/` `plugins/`
   `cli.py` `requirements.py` 移入包目录（`gui.py`），清单与内置 es.exe 随包分发；包内导入改相对形式，
   插件清单里的动态导入改全路径。仓库根保留 `requirements.py` / `cli.py` **兼容 shim**，

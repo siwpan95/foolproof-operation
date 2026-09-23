@@ -304,11 +304,12 @@ class _FakePip:
 
     name = "pip"
 
-    def __init__(self, *, results=None, outdated=None, versions=None):
+    def __init__(self, *, results=None, outdated=None, versions=None, errors=None):
         self.calls = []
         self.results = list(results or [])
         self._outdated = dict(outdated or {})
         self._versions = dict(versions or {})
+        self._errors = dict(errors or {})
         self.last_outdated_error = None
 
     def install(self, targets, python_exe=None, upgrade=False, timeout=None):
@@ -322,8 +323,16 @@ class _FakePip:
     def outdated(self, python_exe=None, timeout=120):
         return dict(self._outdated)
 
+    def show(self, pkg, python_exe=None):
+        """与 PipService.show 同形状：严格区分 installed / missing / error。"""
+        if pkg in self._errors:
+            return {"state": "error", "version": None, "detail": self._errors[pkg]}
+        if pkg in self._versions:
+            return {"state": "installed", "version": self._versions[pkg], "detail": ""}
+        return {"state": "missing", "version": None, "detail": ""}
+
     def installed_version(self, pkg, python_exe=None):
-        return self._versions.get(pkg)
+        return self.show(pkg, python_exe)["version"]
 
 
 class _FakeCategories:

@@ -149,19 +149,37 @@ class PipService(Service):
             self.last_outdated_error = str(exc)
             return {}
 
-    def installed_version(self, pkg: str, python_exe: Optional[str] = None) -> Optional[str]:
-        """``pip show <pkg>`` → ``Version:`` 值；未安装返回 ``None``。"""
+    def show(self, pkg: str, python_exe: Optional[str] = None) -> Dict[str, Any]:
+        """``pip show <pkg>`` → ``{"state", "version", "detail"}``。
+
+        ``state`` 区分三种情形 —— **「未安装」与「查询异常」必须分开**：
+        GUI 的版本检查对前者记「⚠️ 未安装」、对后者记「❌ 检查失败」，
+        合并成 ``None`` 会把两种日志混为一谈（迁移 GUI 流程时发现的行为差异）。
+        """
         py = python_exe or self.python_exe
         try:
-            info = subprocess.check_output(
-                [py, "-m", "pip", "show", pkg], text=True, errors="replace", timeout=30
+            proc = subprocess.run(
+                [py, "-m", "pip", "show", pkg],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                encoding="utf-8",
+                errors="replace",
             )
-        except Exception:
-            return None
-        for line in info.splitlines():
+        except Exception as exc:
+            return {"state": "error", "version": None, "detail": str(exc)}
+        if proc.returncode != 0:
+            return {"state": "missing", "version": None, "detail": (proc.stderr or "").strip()}
+        version = "?"
+        for line in (proc.stdout or "").splitlines():
             if line.startswith("Version:"):
-                return line.split(":", 1)[1].strip()
-        return "?"
+                version = line.split(":", 1)[1].strip()
+                break
+        return {"state": "installed", "version": version, "detail": ""}
+
+    def installed_version(self, pkg: str, python_exe: Optional[str] = None) -> Optional[str]:
+        """``pip show <pkg>`` → ``Version:`` 值；未安装或查询失败返回 ``None``。"""
+        return self.show(pkg, python_exe=python_exe)["version"]
 
     # ── 操作 ─────────────────────────────────────────
 
