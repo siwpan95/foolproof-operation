@@ -2,7 +2,7 @@
 
 > 本文是「foolproof-operation 环境发现从目录遍历升级为 NTFS 元数据索引」的设计与事实基线。
 > 实测环境：本机 `SIWPAN\13122`，2026-09-23，Python 3.13.14，卷 C/D/E/F/G 全 NTFS（G: 4.0 TB）。
-> 规划全文见 `G:\docs\md\allin主工作区\USN索引与Cordis内核规划_2026-09-23.md`（v2）。
+> 规划全文见 `G:\allin\docs\md\allin主工作区\USN索引与Cordis内核规划_2026-09-23.md`（v2）。
 
 ## 1. 来源与许可记账（借鉴必记账）
 

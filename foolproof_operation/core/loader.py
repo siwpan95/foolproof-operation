@@ -38,7 +38,7 @@ __all__ = [
 ]
 
 #: 内置默认清单（阶段 4/5 逐步追加：categories / pip / installer / scanner / reqtxt /
-#: fileindex / search / gui / cli —— 见 G:\docs\md\allin主工作区\USN索引与Cordis内核规划_2026-09-23.md）
+#: fileindex / search / gui / cli —— 见 G:\allin\docs\md\allin主工作区\USN索引与Cordis内核规划_2026-09-23.md）
 DEFAULT_ROWS: List[Dict[str, Any]] = [
     {"id": "bus", "plugin": "foolproof_operation.core.events:bus_plugin"},
 ]

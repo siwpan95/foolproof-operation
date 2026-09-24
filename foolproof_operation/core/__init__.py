@@ -9,7 +9,7 @@
   ``DuplicateScopeError`` / ``DisposedError`` / ``CompositionError``。
 
 设计与实测依据见 ``docs/usn-indexer.md``；规划见
-``G:\\docs\\md\\allin主工作区\\USN索引与Cordis内核规划_2026-09-23.md``。
+``G:\\allin\\docs\\md\\allin主工作区\\USN索引与Cordis内核规划_2026-09-23.md``。
 """
 
 from __future__ import annotations
