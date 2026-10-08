@@ -48,8 +48,8 @@ def env_group(py):
     if not py:
         return "未知"
     p = py.replace("\\", "/").lower()
-    if "f:/python314" in p:
-        return r"F:\Python314（当前）"
+    if "f:/python314" in p:  # 原硬编码路径的历史文本匹配（旧日志里就是这个值，保留以正确归类）
+        return "主解释器（去符盘：/Python314）"
     if "appdata/local/programs/python" in p or "pythoncore" in p:
         return "旧 Python（C 盘 AppData）"
     if ".venv" in p or "/venv/" in p:

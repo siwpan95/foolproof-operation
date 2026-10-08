@@ -48,7 +48,7 @@ try:
 except Exception as e:
     print("获取已安装列表失败:", e)
 
-print(f"F:\\Python314 已安装 {len(installed)} 个包")
+print(f"主解释器（去符盘：/Python314）已安装 {len(installed)} 个包")
 
 def pypi_json(name, retries=2):
     url = "https://pypi.org/pypi/" + urllib.parse.quote(name, safe="") + "/json"
@@ -187,7 +187,7 @@ for c in candidates:
     if name_key in installed:
         results.append({"spec": spec, "name": name_key, "status": "already_installed",
                         "install_spec": None,
-                        "reason": f"F:\\Python314 已安装 {installed[name_key]}"})
+                        "reason": f"主解释器（去符盘：/Python314）已安装 {installed[name_key]}"})
         print(f"already: {spec} ({installed[name_key]})")
         continue
     v, why = pick(data, specifier)

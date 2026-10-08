@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""按 retry_final_list.json 在 F:\Python314 下批量安装，日志写入 重试安装日志.txt"""
+"""按 retry_final_list.json 在**主解释器**（去符盘：/Python314）下批量安装，日志写入 重试安装日志.txt"""
 import json
 import subprocess
 import sys
