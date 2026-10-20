@@ -158,7 +158,7 @@ M = OrderedDict([
     #   注意 PyPI 同名不同项目不算自研（如 alloy 在 PyPI 上是 Elide 的 High-performance runtime，
     #   与本地自研的 an-engine 无关 —— 该引擎 2026-09-19 已由 alloy 改名为 allin_engine）。
     #   该分类的 value 写**本地仓库路径**，如
-    #       "allin-engine": "-e G:/repos/an-engine"、"bloodmusic": "-e G:/repos/audio-generation"；
+    #       "allin-engine": "-e G:/repos/an-engine"、"bloodmusic": "-e G:/repos/bloodmusic"；
     #   安装时 pip install <路径>，检查/卸载由 cli.pip_query_name() 回退到显示名。
     ("🏠 本地 / 自研包", []),
 ])
