@@ -3,6 +3,14 @@
 > Repository: <https://gitee.com/siwpan/foolproof-operation> | License: MIT (see [LICENSE](LICENSE))
 > Note: `<PATH>` is a placeholder for a directory / executable path — replace it with the real one on your machine.
 
+[![PyPI](https://img.shields.io/pypi/v/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+[![Python](https://img.shields.io/pypi/pyversions/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+[![License](https://img.shields.io/pypi/l/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+
+**PyPI**: <https://pypi.org/project/foolproof-operation/> |
+**distribution name `foolproof-operation` / import name `foolproof_operation`**; the CLI command
+matches the distribution name.
+
 A tkinter GUI tool for managing **761 Python packages across 24 functional categories**, plus an
 "🔍 Auto-discovery" bucket for packages that are not filed yet.
 

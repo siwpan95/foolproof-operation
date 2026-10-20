@@ -3,6 +3,13 @@
 > 仓库：<https://gitee.com/siwpan/foolproof-operation> ｜ 许可：MIT（见 [LICENSE](LICENSE)）
 > 注：文中 <PATH> 为路径占位符，请替换为你本机实际的目录 / 可执行文件路径。
 
+[![PyPI](https://img.shields.io/pypi/v/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+[![Python](https://img.shields.io/pypi/pyversions/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+[![License](https://img.shields.io/pypi/l/foolproof-operation)](https://pypi.org/project/foolproof-operation/)
+
+**PyPI**：<https://pypi.org/project/foolproof-operation/> ｜
+**发行名 `foolproof-operation` / 导入名 `foolproof_operation`**；CLI 命令同发行名。
+
 图形化 Python 依赖库管理工具：**24 个功能分类、761 个库**，另设「🔍 自动发现」桶承接待归类项。
 
 ## 功能
@@ -32,7 +39,13 @@ pip install foolproof-operation
 
 foolproof-operation              # 图形界面
 foolproof-operation cli list     # 命令行（子命令同下节）
+foolproof-operation cli doctor   # 体检：插件/分类/索引/日志可写性
+
+python -c "import foolproof_operation as f; print(f.__version__)"
 ```
+
+> Windows 平台专用：本工具依赖 `tkinter`，且「环境发现」基于 NTFS USN/MFT 索引
+> （索引不可用时会显式回退 Everything / 目录遍历）。
 
 源码方式（无需安装）也照旧可用：
 
