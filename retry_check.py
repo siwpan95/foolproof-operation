@@ -35,7 +35,7 @@ SKIP_REASON = {
 
 candidates = json.loads(CAND.read_text(encoding="utf-8"))
 
-# 已安装包（F:\Python314）
+# 已安装包（/Python314）
 installed = {}
 try:
     r = subprocess.run(

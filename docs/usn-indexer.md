@@ -44,7 +44,7 @@
 | 5 | `ENUM_USN_DATA`，`LowUsn=0` + `HighUsn=0x7FFFFFFFFFFFFFFF` | **480,523 条 / 60s ≈ 8,000 条/秒**（速率随预热爬升），60s 未到 EOF |
 | 6 | 第 5 项期间的命中 | `python.exe` / `pythonw.exe` / `pyvenv.cfg` / `site-packages` 各 ≥10（尚未扫完） |
 | 7 | 非提权 `es.exe` 查询（Everything 未运行） | `Error 8: Everything IPC not found`，0 结果 |
-| 8 | Everything 运行中 `es.exe folder:site-packages` | 正常返回（F:/Python314 等路径） |
+| 8 | Everything 运行中 `es.exe folder:site-packages` | 正常返回（/Python314 等路径） |
 
 ### 关键结论（#4 是本仓相对网络资料的实质修正）
 
